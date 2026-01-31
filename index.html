@@ -4,389 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packet Point Technologies - IT Infrastructure & Managed Services</title>
+    <meta name="description" content="Enterprise IT infrastructure and managed services for growing businesses. Expert network engineering, cloud solutions, and cybersecurity.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Arial, sans-serif;
-            background: #0a0a0a;
-            color: #e5e5e5;
-            line-height: 1.6;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #222;
-            z-index: 1000;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #00aaff;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #e5e5e5;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #00aaff;
-        }
-
-        .cta-button {
-            background: #00aaff;
-            color: #0a0a0a;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .cta-button:hover {
-            background: #0088cc;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            padding: 6rem 2rem 4rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: #999;
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .primary-btn {
-            background: #00aaff;
-            color: #0a0a0a;
-            padding: 1rem 2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: background 0.2s;
-            display: inline-block;
-        }
-
-        .primary-btn:hover {
-            background: #0088cc;
-        }
-
-        .secondary-btn {
-            background: transparent;
-            color: #00aaff;
-            padding: 1rem 2rem;
-            border: 2px solid #00aaff;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-
-        .secondary-btn:hover {
-            background: #00aaff;
-            color: #0a0a0a;
-        }
-
-        /* Services Section */
-        .services {
-            background: #0f0f0f;
-            padding: 5rem 2rem;
-        }
-
-        /* Technologies Section */
-        .technologies {
-            background: #0a0a0a;
-            padding: 5rem 2rem;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .tech-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.5rem;
-            background: #1a1a1a;
-            border-radius: 8px;
-            border: 1px solid #222;
-            transition: all 0.2s;
-        }
-
-        .tech-item:hover {
-            border-color: #00aaff;
-            transform: translateY(-4px);
-        }
-
-        .tech-logo {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            filter: grayscale(100%) brightness(0.8);
-            opacity: 0.7;
-            transition: all 0.3s;
-        }
-
-        .tech-item:hover .tech-logo {
-            filter: grayscale(0%) brightness(1);
-            opacity: 1;
-        }
-
-        .tech-name {
-            font-size: 0.9rem;
-            color: #888;
-            font-weight: 500;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #888;
-            margin-bottom: 3rem;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid #222;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 170, 255, 0.15);
-            border-color: #00aaff;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-            color: #ffffff;
-        }
-
-        .service-card p {
-            color: #999;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: #0a0a0a;
-            color: white;
-        }
-
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .contact p {
-            font-size: 1.2rem;
-            color: #888;
-            margin-bottom: 2rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .contact-method {
-            text-align: center;
-        }
-
-        .contact-method h4 {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            color: #666;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
-        }
-
-        .contact-method a {
-            color: #00aaff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .contact-method a:hover {
-            color: #00ccff;
-        }
-
-        /* Footer */
-        footer {
-            background: #050505;
-            color: #666;
-            padding: 3rem 2rem 2rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #ffffff;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #666;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.2s;
-        }
-
-        .footer-section a:hover {
-            color: #00aaff;
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid #1a1a1a;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #e5e5e5;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .contact-info {
-                gap: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -395,11 +15,11 @@
             <a href="#" class="logo">Packet Point Technologies</a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#technologies">Technologies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="cta-button">Get Started</a>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
         </nav>
     </header>
 
@@ -461,51 +81,51 @@
             
             <div class="tech-grid">
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco" class="tech-logo">
+                    <img src="images/logos/cisco.svg" alt="Cisco" class="tech-logo">
                     <span class="tech-name">Cisco</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Arista_Networks_logo.svg" alt="Arista" class="tech-logo">
+                    <img src="images/logos/arista.svg" alt="Arista" class="tech-logo">
                     <span class="tech-name">Arista</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Ruckus_Wireless_logo.svg" alt="Ruckus" class="tech-logo">
+                    <img src="images/logos/ruckus.svg" alt="Ruckus" class="tech-logo">
                     <span class="tech-name">Ruckus</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Ubiquiti_Networks_Logo.svg" alt="Ubiquiti" class="tech-logo">
+                    <img src="images/logos/ubiquiti.svg" alt="Ubiquiti" class="tech-logo">
                     <span class="tech-name">Ubiquiti</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Juniper_Networks_logo.svg" alt="Juniper" class="tech-logo">
+                    <img src="images/logos/juniper.svg" alt="Juniper" class="tech-logo">
                     <span class="tech-name">Juniper</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure" class="tech-logo">
+                    <img src="images/logos/azure.svg" alt="Azure" class="tech-logo">
                     <span class="tech-name">Azure</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="tech-logo">
+                    <img src="images/logos/aws.svg" alt="AWS" class="tech-logo">
                     <span class="tech-name">AWS</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_logo_%282019%E2%80%93present%29.svg" alt="Microsoft 365" class="tech-logo">
+                    <img src="images/logos/microsoft365.svg" alt="Microsoft 365" class="tech-logo">
                     <span class="tech-name">Microsoft 365</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Sophos_logo.svg" alt="Sophos" class="tech-logo">
+                    <img src="images/logos/sophos.svg" alt="Sophos" class="tech-logo">
                     <span class="tech-name">Sophos</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Palo_Alto_Networks_logo.svg" alt="Palo Alto" class="tech-logo">
+                    <img src="images/logos/paloalto.svg" alt="Palo Alto" class="tech-logo">
                     <span class="tech-name">Palo Alto</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Zabbix_logo.svg" alt="Zabbix" class="tech-logo">
+                    <img src="images/logos/zabbix.svg" alt="Zabbix" class="tech-logo">
                     <span class="tech-name">Zabbix</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg" alt="Prometheus" class="tech-logo">
+                    <img src="images/logos/prometheus.svg" alt="Prometheus" class="tech-logo">
                     <span class="tech-name">Prometheus</span>
                 </div>
             </div>
@@ -525,7 +145,7 @@
                 </div>
                 <div class="contact-method">
                     <h4>Phone</h4>
-                    <a href="tel:+15551234567">(555) 123-4567</a>
+                    <a href="tel:+13303475329">(330) 347-5329</a>
                 </div>
             </div>
         </div>
@@ -549,7 +169,6 @@
             
             <div class="footer-section">
                 <h3>Company</h3>
-                <a href="#about">About Us</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -558,5 +177,7 @@
             <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
