@@ -1,1 +1,562 @@
-<h1>Testing Azure instead of AWS</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packet Point Technologies - IT Infrastructure & Managed Services</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e5e5e5;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        .cta-button {
+            background: #00aaff;
+            color: #0a0a0a;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #0088cc;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem 4rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #999;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            background: #00aaff;
+            color: #0a0a0a;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .primary-btn:hover {
+            background: #0088cc;
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: #00aaff;
+            padding: 1rem 2rem;
+            border: 2px solid #00aaff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .secondary-btn:hover {
+            background: #00aaff;
+            color: #0a0a0a;
+        }
+
+        /* Services Section */
+        .services {
+            background: #0f0f0f;
+            padding: 5rem 2rem;
+        }
+
+        /* Technologies Section */
+        .technologies {
+            background: #0a0a0a;
+            padding: 5rem 2rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #222;
+            transition: all 0.2s;
+        }
+
+        .tech-item:hover {
+            border-color: #00aaff;
+            transform: translateY(-4px);
+        }
+
+        .tech-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(0.8);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .tech-item:hover .tech-logo {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+        }
+
+        .tech-name {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #222;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 170, 255, 0.15);
+            border-color: #00aaff;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .contact-method {
+            text-align: center;
+        }
+
+        .contact-method h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-method a {
+            color: #00aaff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .contact-method a:hover {
+            color: #00ccff;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            color: #666;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #666;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: #00aaff;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #e5e5e5;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Packet Point Technologies</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Started</a>
+            <button class="mobile-menu-btn">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>IT Infrastructure<br>Built for Growth</h1>
+        <p>Enterprise-grade managed services and network solutions for businesses that need reliable, secure infrastructure.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="primary-btn">Schedule a Call</a>
+            <a href="#services" class="secondary-btn">Our Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">Comprehensive IT solutions tailored to your business needs</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Network Infrastructure</h3>
+                    <p>Enterprise network design and implementation using Cisco, Arista, and Ruckus platforms. STP, OSPF, BGP routing with complete documentation and monitoring.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Managed IT Services</h3>
+                    <p>24/7 monitoring with Zabbix and Prometheus. Proactive maintenance, endpoint management, and rapid response support to minimize downtime.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Cloud Solutions</h3>
+                    <p>Azure and AWS infrastructure management. Office 365 administration, hybrid environment integration, and seamless cloud migration.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Cybersecurity & Compliance</h3>
+                    <p>Sophos and Palo Alto firewall configuration. PCI and HIPAA compliance management with security awareness training and password management.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Infrastructure Automation</h3>
+                    <p>Ansible deployment and configuration management. Python scripting for workflow automation and infrastructure as code.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Documentation & Monitoring</h3>
+                    <p>NetBox infrastructure documentation and network monitoring solutions. Complete visibility into your IT environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies" id="technologies">
+        <div class="section-container">
+            <h2 class="section-title">Technologies & Platforms</h2>
+            <p class="section-subtitle">Expert-level experience across industry-leading platforms</p>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/cisco-2.svg" alt="Cisco" class="tech-logo">
+                    <span class="tech-name">Cisco</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/arista-networks.svg" alt="Arista" class="tech-logo">
+                    <span class="tech-name">Arista</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/ruckus-wireless.svg" alt="Ruckus" class="tech-logo">
+                    <span class="tech-name">Ruckus</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/ubiquiti-networks.svg" alt="Ubiquiti" class="tech-logo">
+                    <span class="tech-name">Ubiquiti</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/juniper-networks-2.svg" alt="Juniper" class="tech-logo">
+                    <span class="tech-name">Juniper</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/azure-1.svg" alt="Azure" class="tech-logo">
+                    <span class="tech-name">Azure</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" class="tech-logo">
+                    <span class="tech-name">AWS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/microsoft-office-2013.svg" alt="Microsoft 365" class="tech-logo">
+                    <span class="tech-name">Microsoft 365</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/sophos.svg" alt="Sophos" class="tech-logo">
+                    <span class="tech-name">Sophos</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/palo-alto-networks.svg" alt="Palo Alto" class="tech-logo">
+                    <span class="tech-name">Palo Alto</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/zabbix.svg" alt="Zabbix" class="tech-logo">
+                    <span class="tech-name">Zabbix</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/prometheus.svg" alt="Prometheus" class="tech-logo">
+                    <span class="tech-name">Prometheus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Let's Talk About Your IT Needs</h2>
+            <p>Schedule a consultation to discuss how we can support your business with reliable, scalable infrastructure.</p>
+            
+            <div class="contact-info">
+                <div class="contact-method">
+                    <h4>Email</h4>
+                    <a href="mailto:info@packetpointtechnologies.com">info@packetpointtechnologies.com</a>
+                </div>
+                <div class="contact-method">
+                    <h4>Phone</h4>
+                    <a href="tel:+15551234567">(555) 123-4567</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Packet Point Technologies</h3>
+                <p>Professional IT infrastructure and managed services for growing businesses.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services">Network Infrastructure</a>
+                <a href="#services">Managed IT Services</a>
+                <a href="#services">Cloud Solutions</a>
+                <a href="#services">Cybersecurity</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
