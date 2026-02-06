@@ -4,233 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Studies - Packet Point Technologies</title>
-    <meta name="description" content="Real-world examples of IT infrastructure projects and managed services implementations.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div class="loader">
-        <div class="loader-spinner"></div>
-    </div>
-
-    <!-- Header -->
     <header>
-        <nav>
-            <a href="index.html" class="logo">Packet Point Technologies</a>
-            <ul class="nav-links">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#technologies">Technologies</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <a href="index.html#contact" class="cta-button">Get Started</a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-        </nav>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Packet Point Technologies</a>
+                <nav>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="contact.html" class="cta-button">Contact</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Case Studies</h1>
-        <p>Real-world examples of how we've helped businesses build reliable, scalable IT infrastructure</p>
-    </section>
-
-    <!-- Case Study 1 -->
-    <section class="services">
-        <div class="section-container">
-            <div class="service-card" style="border-left: 4px solid #00aaff; margin-bottom: 3rem;">
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">Healthcare Practice Network Redesign</h2>
-                <p style="color: #888; margin-bottom: 2rem;">Healthcare | Multi-Location Medical Practice</p>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">The Challenge</h3>
-                <p style="color: #ccc; line-height: 1.8; font-size: 1.05rem;">
-                    A growing medical practice with three locations was struggling with an outdated network infrastructure that couldn't support their Electronic Health Records (EHR) system reliably. Frequent connectivity issues were impacting patient care, and the practice needed a HIPAA-compliant solution that could scale as they added new locations.
-                </p>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">Our Solution</h3>
-                <div style="background: #0f0f0f; padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
-                    <ul style="list-style: none; padding: 0; color: #ccc; line-height: 2;">
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Designed and deployed a unified network architecture across all locations using Cisco switching and Sophos firewall solutions</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Implemented VLAN segmentation to isolate medical devices and patient data systems</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Configured site-to-site VPN connections for secure inter-office communication</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Deployed comprehensive monitoring with Zabbix to proactively identify issues</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Established complete NetBox documentation for all network infrastructure</li>
-                        <li style="padding: 0.5rem 0;">→ Implemented HIPAA-compliant security policies and staff training</li>
-                    </ul>
-                </div>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">Results</h3>
-                <div class="service-grid">
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">99.8%</div>
-                        <div style="color: #888; margin-top: 0.5rem;">Network Uptime</div>
-                    </div>
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">60%</div>
-                        <div style="color: #888; margin-top: 0.5rem;">Reduction in IT Issues</div>
-                    </div>
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">100%</div>
-                        <div style="color: #888; margin-top: 0.5rem;">HIPAA Compliance</div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Cisco</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Sophos</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Zabbix</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">NetBox</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">HIPAA Compliance</span>
-                </div>
-            </div>
+    <section class="page-header">
+        <div class="container">
+            <h1>Case Studies</h1>
+            <p>Recent client projects</p>
         </div>
     </section>
 
-    <!-- Case Study 2 -->
-    <section class="contact" style="padding: 5rem 2rem;">
-        <div class="section-container">
-            <div class="service-card" style="border-left: 4px solid #00aaff; margin-bottom: 3rem;">
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">Manufacturing Company Cloud Migration</h2>
-                <p style="color: #888; margin-bottom: 2rem;">Manufacturing | Mid-Sized Industrial Equipment Manufacturer</p>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">The Challenge</h3>
-                <p style="color: #ccc; line-height: 1.8; font-size: 1.05rem;">
-                    A manufacturing company with 150 employees was running aging on-premise infrastructure that was costly to maintain and limiting their ability to support remote workers. They needed to migrate to the cloud while maintaining access to specialized manufacturing software and ensuring minimal disruption to operations.
-                </p>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">Our Solution</h3>
-                <div style="background: #0f0f0f; padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
-                    <ul style="list-style: none; padding: 0; color: #ccc; line-height: 2;">
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Conducted comprehensive assessment of existing infrastructure and applications</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Designed hybrid Azure environment with on-premise integration for manufacturing systems</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Migrated file servers and collaboration tools to Office 365</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Implemented Azure AD with conditional access policies for secure remote access</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Deployed Azure Site-to-Site VPN for secure cloud connectivity</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Automated infrastructure deployment with Ansible for consistency</li>
-                        <li style="padding: 0.5rem 0;">→ Established 24/7 monitoring with Prometheus for cloud resources</li>
-                    </ul>
-                </div>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">Results</h3>
-                <div class="service-grid">
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">45%</div>
-                        <div style="color: #888; margin-top: 0.5rem;">IT Cost Reduction</div>
-                    </div>
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">Zero</div>
-                        <div style="color: #888; margin-top: 0.5rem;">Migration Downtime</div>
-                    </div>
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">3x</div>
-                        <div style="color: #888; margin-top: 0.5rem;">Faster Provisioning</div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Azure</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Office 365</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Azure AD</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Ansible</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Prometheus</span>
-                </div>
-            </div>
+    <div class="container">
+        <div class="case-study-card">
+            <h2>City of Wadsworth</h2>
+            <p class="case-label">Municipal IT Consulting - Wadsworth, Ohio</p>
+            <p>Providing network and software support for municipal operations since 2023.</p>
+            <p><strong>Services Provided:</strong></p>
+            <ul>
+                <li>NetBox deployment and configuration across the environment</li>
+                <li>Cisco switch configuration for emergency services infrastructure</li>
+                <li>Network and software support for municipal operations</li>
+                <li>Infrastructure documentation and inventory management</li>
+                <li>Hardware support and network troubleshooting</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- Case Study 3 -->
-    <section class="services">
-        <div class="section-container">
-            <div class="service-card" style="border-left: 4px solid #00aaff;">
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">Financial Services Network Security Overhaul</h2>
-                <p style="color: #888; margin-bottom: 2rem;">Financial Services | Regional Investment Firm</p>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">The Challenge</h3>
-                <p style="color: #ccc; line-height: 1.8; font-size: 1.05rem;">
-                    An investment firm needed to meet stringent PCI compliance requirements while modernizing their security infrastructure. Their existing firewall was end-of-life, they lacked comprehensive security monitoring, and they needed to implement multi-factor authentication across all systems to meet regulatory requirements.
-                </p>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">Our Solution</h3>
-                <div style="background: #0f0f0f; padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
-                    <ul style="list-style: none; padding: 0; color: #ccc; line-height: 2;">
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Deployed Palo Alto next-generation firewall with advanced threat prevention</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Implemented network segmentation with strict access controls between departments</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Configured centralized logging and SIEM integration for security event monitoring</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Rolled out enterprise password management with multi-factor authentication</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Conducted comprehensive security awareness training for all staff</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #222;">→ Established quarterly vulnerability assessments and penetration testing</li>
-                        <li style="padding: 0.5rem 0;">→ Created detailed documentation of security policies and procedures</li>
-                    </ul>
-                </div>
-                
-                <h3 style="color: #00aaff; margin-top: 2rem; margin-bottom: 1rem;">Results</h3>
-                <div class="service-grid">
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">100%</div>
-                        <div style="color: #888; margin-top: 0.5rem;">PCI Compliance</div>
-                    </div>
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">90%</div>
-                        <div style="color: #888; margin-top: 0.5rem;">Fewer Security Incidents</div>
-                    </div>
-                    <div style="text-align: center; background: #0f0f0f; padding: 2rem; border-radius: 6px; border: 1px solid #222;">
-                        <div style="font-size: 3rem; color: #00aaff; font-weight: 700;">Zero</div>
-                        <div style="color: #888; margin-top: 0.5rem;">Audit Findings</div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Palo Alto</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">PCI Compliance</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">SIEM</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">MFA</span>
-                    <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Security Training</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="contact" style="padding: 5rem 2rem;">
-        <div class="section-container" style="text-align: center;">
-            <h2 class="section-title">Ready to Transform Your IT Infrastructure?</h2>
-            <p class="section-subtitle">Let's discuss how we can help you achieve similar results with reliable, scalable solutions tailored to your business needs.</p>
-            <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
-                <a href="index.html#contact" class="primary-btn">Schedule a Consultation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Packet Point Technologies</h3>
-                <p>Professional IT infrastructure and managed services for growing businesses.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Packet Point Technologies</h3>
+                    <p>IT consulting and infrastructure services</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#network">Network Infrastructure</a></li>
+                        <li><a href="services.html#cloud">Cloud Operations</a></li>
+                        <li><a href="services.html#automation">Infrastructure Automation</a></li>
+                        <li><a href="services.html#monitoring">Monitoring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="index.html#services">Network Infrastructure</a>
-                <a href="index.html#services">Managed IT Services</a>
-                <a href="index.html#services">Cloud Solutions</a>
-                <a href="index.html#services">Cybersecurity</a>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Company</h3>
-                <a href="about.html">About Us</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="index.html#contact">Contact</a>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>

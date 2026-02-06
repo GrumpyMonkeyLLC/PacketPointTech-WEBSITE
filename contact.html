@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Packet Point Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Packet Point Technologies</a>
+                <nav>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="contact.html" class="cta-button">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss your infrastructure needs</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2 style="color: #fff; margin-bottom: 2rem;">Send a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interest</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="network">Network Infrastructure</option>
+                                    <option value="cloud">Cloud Operations</option>
+                                    <option value="automation">Infrastructure Automation</option>
+                                    <option value="monitoring">Monitoring & Observability</option>
+                                    <option value="documentation">Documentation & SOPs</option>
+                                    <option value="support">IT Support</option>
+                                    <option value="other">Other / General Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Tell us about your infrastructure needs or project requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="contact-detail">
+                            <h4>Email</h4>
+                            <a href="mailto:info@packetpointtechnologies.com">info@packetpointtechnologies.com</a>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <h4>Phone</h4>
+                            <a href="tel:+13303475329">(330) 347-5329</a>
+                        </div>
+                        
+                        <div class="contact-detail" style="margin-top: 2rem;">
+                            <h4>Location</h4>
+                            <p style="color: #d1d5db; font-size: 1.125rem;">Wadsworth, Ohio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Packet Point Technologies</h3>
+                    <p>IT consulting and infrastructure services</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#network">Network Infrastructure</a></li>
+                        <li><a href="services.html#cloud">Cloud Operations</a></li>
+                        <li><a href="services.html#automation">Infrastructure Automation</a></li>
+                        <li><a href="services.html#monitoring">Monitoring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
