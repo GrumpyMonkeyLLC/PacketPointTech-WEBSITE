@@ -29,7 +29,8 @@ jobs:
           app_location: "/"
           api_location: ""
           output_location: ""
-          deployment_environment: ${{ github.ref_name == 'main' && 'production' || github.ref_name }}
+          production_branch: main
+          deployment_environment: ${{ github.ref_name != 'main' && github.ref_name || '' }}
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
