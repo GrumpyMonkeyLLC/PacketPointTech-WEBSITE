@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Packet Point Technologies</title>
   <meta name="description" content="Comprehensive IT services including network infrastructure, managed services, cloud solutions, cybersecurity, and automation.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b7fff'/><path d='M28 50 L50 28 L72 50 L50 72 Z' fill='none' stroke='white' stroke-width='6' stroke-linejoin='round'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231d4ed8'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='none' stroke='white' stroke-width='7' stroke-linejoin='round'/></svg>">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,9 +15,7 @@
 <header>
   <nav>
     <a href="index.html" class="logo">
-      <span class="logo-mark">
-        <svg viewBox="0 0 16 16"><path d="M4 8 L8 4 L12 8 L8 12 Z" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
-      </span>
+      <span class="logo-mark"><svg viewBox="0 0 16 16" fill="none"><path d="M4 8L8 4L12 8L8 12Z" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
       Packet Point Technologies
     </a>
     <ul class="nav-links">
@@ -26,8 +24,11 @@
       <li><a href="about.html">About</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
-    <a href="index.html#contact" class="nav-cta">Get in Touch</a>
-    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <a href="index.html#contact" class="nav-cta">Get in Touch</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    </div>
   </nav>
 </header>
 
@@ -38,24 +39,23 @@
   <a href="index.html#contact">Contact</a>
 </nav>
 
-<!-- Page Hero -->
 <section class="page-hero">
-  <div class="hero-grid-bg"></div>
+  <div class="hero-texture"></div>
   <div class="container">
     <span class="eyebrow">What We Do</span>
     <h1>Services</h1>
-    <p>End-to-end IT infrastructure services — from initial network design to ongoing managed operations and cloud architecture.</p>
+    <p>End-to-end IT infrastructure — from initial network design to ongoing managed operations and cloud architecture.</p>
   </div>
 </section>
 
-<!-- Network Infrastructure -->
+<!-- Network -->
 <section id="network">
   <div class="container">
     <div class="service-detail">
       <div class="service-detail-header reveal">
         <span class="eyebrow">Network Infrastructure</span>
-        <h2>Enterprise networking built for performance and reliability</h2>
-        <p>We design, deploy, and manage networks that deliver the performance, security, and reliability your business demands — from single-site deployments to complex multi-location enterprise architectures.</p>
+        <h2>Enterprise networking built for performance</h2>
+        <p>We design, deploy, and manage networks that deliver the performance, security, and reliability your business demands — from single-site deployments to complex multi-location architectures.</p>
         <div class="service-tag-row">
           <span class="service-tag">Cisco</span>
           <span class="service-tag">Arista</span>
@@ -109,13 +109,13 @@
   </div>
 </section>
 
-<!-- Cloud Solutions -->
+<!-- Cloud -->
 <section id="cloud">
   <div class="container">
     <div class="service-detail">
       <div class="service-detail-header reveal">
         <span class="eyebrow">Cloud Solutions</span>
-        <h2>Cloud infrastructure that's secure, scalable, and cost-effective</h2>
+        <h2>Cloud infrastructure that's secure and cost-effective</h2>
         <p>From migration planning to ongoing optimization, we handle your Azure and AWS environments so you get the benefits of cloud without the management overhead.</p>
         <div class="service-tag-row">
           <span class="service-tag">Microsoft Azure</span>
@@ -139,14 +139,14 @@
   </div>
 </section>
 
-<!-- Cybersecurity -->
+<!-- Security -->
 <section class="service-section-alt" id="security">
   <div class="container">
     <div class="service-detail">
       <div class="service-detail-header reveal">
         <span class="eyebrow">Cybersecurity & Compliance</span>
         <h2>Defense-in-depth security for real-world threats</h2>
-        <p>We implement layered security strategies combining technology, policy, and training. PCI and HIPAA compliance built into the architecture — not bolted on after.</p>
+        <p>Layered security strategies combining technology, policy, and training. PCI and HIPAA compliance built into the architecture — not bolted on after.</p>
         <div class="service-tag-row">
           <span class="service-tag">Palo Alto</span>
           <span class="service-tag">Sophos</span>
@@ -162,7 +162,7 @@
         <li>Enterprise password management and MFA deployment</li>
         <li>Vulnerability assessments and remediation planning</li>
         <li>Incident response planning and tabletop exercises</li>
-        <li>Security policy development aligned to your regulatory requirements</li>
+        <li>Security policy development aligned to regulatory requirements</li>
         <li>Endpoint detection and response (EDR) deployment and management</li>
       </ul>
     </div>
@@ -176,7 +176,7 @@
       <div class="service-detail-header reveal">
         <span class="eyebrow">Infrastructure Automation</span>
         <h2>Consistent deployments, zero manual drift</h2>
-        <p>Infrastructure as Code practices using Ansible and Python — so every configuration change is version-controlled, repeatable, and reversible.</p>
+        <p>Infrastructure as Code using Ansible and Python — so every configuration change is version-controlled, repeatable, and reversible.</p>
         <div class="service-tag-row">
           <span class="service-tag">Ansible</span>
           <span class="service-tag">Python</span>
@@ -197,7 +197,7 @@
   </div>
 </section>
 
-<!-- Documentation & Monitoring -->
+<!-- Documentation -->
 <section class="service-section-alt" id="monitoring">
   <div class="container">
     <div class="service-detail">
@@ -224,7 +224,6 @@
   </div>
 </section>
 
-<!-- CTA Band -->
 <div class="cta-band">
   <div class="container">
     <h2>Ready to get started?</h2>
@@ -241,9 +240,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <span class="logo-mark">
-            <svg viewBox="0 0 16 16"><path d="M4 8 L8 4 L12 8 L8 12 Z" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </span>
+          <span class="logo-mark"><svg viewBox="0 0 16 16" fill="none"><path d="M4 8L8 4L12 8L8 12Z" fill="none" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
           Packet Point Technologies
         </a>
         <p>Professional IT infrastructure and managed services for growing businesses in Northeast Ohio and beyond.</p>

@@ -1,17 +1,39 @@
-// ── Loader ──────────────────────────────────────────────────────────────────
+// ── Theme ────────────────────────────────────────────────────────────────────
+const root = document.documentElement;
+const themeToggle = document.getElementById('theme-toggle');
+
+const savedTheme = localStorage.getItem('ppt-theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+root.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('ppt-theme', next);
+    updateThemeIcon(next);
+  });
+}
+
+function updateThemeIcon(theme) {
+  if (!themeToggle) return;
+  themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+  themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+}
+
+// ── Loader ───────────────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loader');
-  if (loader) {
-    setTimeout(() => loader.classList.add('hidden'), 200);
-  }
+  if (loader) setTimeout(() => loader.classList.add('hidden'), 150);
 });
 
-// ── Nav scroll ──────────────────────────────────────────────────────────────
+// ── Nav scroll ───────────────────────────────────────────────────────────────
 const header = document.querySelector('header');
 if (header) {
-  const onScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  };
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 16);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 }
@@ -24,7 +46,6 @@ if (menuBtn && mobileNav) {
     const open = mobileNav.classList.toggle('open');
     menuBtn.textContent = open ? '✕' : '☰';
   });
-  // Close on link click
   mobileNav.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       mobileNav.classList.remove('open');
@@ -33,7 +54,7 @@ if (menuBtn && mobileNav) {
   });
 }
 
-// ── Active nav link ──────────────────────────────────────────────────────────
+// ── Active nav ───────────────────────────────────────────────────────────────
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(link => {
   const href = link.getAttribute('href');
@@ -50,6 +71,6 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
