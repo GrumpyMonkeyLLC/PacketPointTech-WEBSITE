@@ -1,393 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Packet Point Technologies</title>
-    <meta name="description" content="Comprehensive IT services including network infrastructure, managed services, cloud solutions, and cybersecurity.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Packet Point Technologies</title>
+  <meta name="description" content="Comprehensive IT services: network infrastructure, managed services, cloud solutions, cybersecurity, automation, and web development.">
+  <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div class="loader">
-        <div class="loader-spinner"></div>
+
+<div class="loader"><div class="loader-ring"></div></div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">☀️</button>
+      <a href="index.html#contact" class="nav-cta">Get a Free Consultation</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
     </div>
+  </nav>
+</header>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Packet Point Technologies</a>
-            <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <a href="index.html#contact" class="cta-button">Get Started</a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-        </nav>
-    </header>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Our Services</h1>
-        <p>Comprehensive IT solutions designed to support your business growth with reliable, scalable infrastructure</p>
-    </section>
+<section class="page-hero">
+  <div class="hero-bg-grid"></div>
+  <div class="container">
+    <span class="eyebrow">What We Do</span>
+    <h1>Services</h1>
+    <p>End-to-end IT infrastructure — from the network layer to cloud architecture, cybersecurity, and your web presence. One partner, full stack.</p>
+  </div>
+</section>
 
-    <!-- Network Infrastructure -->
-    <section class="services" id="network">
-        <div class="section-container">
-            <h2 class="section-title">Network Infrastructure</h2>
-            <p class="section-subtitle">Enterprise-grade networking solutions designed for performance and reliability</p>
-            
-            <div style="max-width: 900px; margin: 0 auto 3rem;">
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Build a robust foundation for your business with our enterprise networking solutions. We design, deploy, and manage networks that deliver the performance, security, and reliability your business demands.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Network Design & Architecture</h3>
-                    <p>Complete network planning tailored to your business needs, from single-site deployments to multi-location enterprise architectures with high availability and redundancy.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Enterprise Switching & Routing</h3>
-                    <p>Cisco, Arista, and Ruckus platform deployment with advanced routing protocols including OSPF, BGP, and EIGRP configuration for optimal performance.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Wireless Solutions</h3>
-                    <p>Seamless wireless network design and deployment with proper coverage planning, capacity management, and secure guest access capabilities.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Network Segmentation</h3>
-                    <p>VLAN implementation for improved security and performance, isolating critical systems and optimizing traffic flow across your network.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>QoS Implementation</h3>
-                    <p>Quality of Service configuration to prioritize business-critical applications, ensuring optimal performance for VoIP, video conferencing, and essential services.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Documentation & Monitoring</h3>
-                    <p>Complete NetBox documentation with 24/7 network monitoring and performance optimization to maintain peak efficiency.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Cisco</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Arista</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Ruckus</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">OSPF</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">BGP</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">NetBox</span>
-            </div>
+<section id="network">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Network Infrastructure</span>
+        <h2>Enterprise networking built for performance and reliability</h2>
+        <p>We design, deploy, and manage networks that deliver the performance, security, and reliability your business demands — from single-site deployments to complex multi-location architectures with full redundancy.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">Cisco IOS</span><span class="service-tag">Cisco Meraki</span><span class="service-tag">Arista EOS</span><span class="service-tag">Ruckus FastIron</span><span class="service-tag">Juniper JUNOS</span><span class="service-tag">Ubiquiti Unifi</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>Network design & architecture for single and multi-site environments</li>
+        <li>Enterprise switching & routing with Cisco, Arista, and Ruckus platforms</li>
+        <li>Advanced routing: OSPF, BGP, EIGRP configuration and optimization</li>
+        <li>Wireless design with coverage planning and secure guest access</li>
+        <li>VLAN segmentation for security isolation and traffic management</li>
+        <li>QoS for VoIP, video conferencing, and business-critical applications</li>
+        <li>Complete NetBox documentation — IP management, rack diagrams, inventory</li>
+        <li>24/7 monitoring and performance alerting from day one</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Managed IT Services -->
-    <section class="contact" style="padding: 5rem 2rem;" id="managed">
-        <div class="section-container">
-            <h2 class="section-title">Managed IT Services</h2>
-            <p class="section-subtitle">Proactive monitoring and support to keep your infrastructure running smoothly</p>
-            
-            <div style="max-width: 900px; margin: 0 auto 3rem;">
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Focus on your business while we handle your IT infrastructure. Our managed services include 24/7 monitoring, proactive maintenance, and rapid response support to minimize downtime and maximize productivity.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>24/7 Infrastructure Monitoring</h3>
-                    <p>Continuous monitoring with Zabbix and Prometheus, with automated alerts and proactive issue resolution before problems impact your business.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Proactive Maintenance</h3>
-                    <p>Regular system updates, patch management, and preventive maintenance to keep your infrastructure secure and performing optimally.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Endpoint Management</h3>
-                    <p>Comprehensive management of workstations and mobile devices, ensuring security compliance and optimal performance across all endpoints.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Help Desk Support</h3>
-                    <p>Rapid response support with clear escalation paths for critical issues, ensuring your team gets help when they need it.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Performance Monitoring</h3>
-                    <p>Detailed performance analytics and capacity planning to ensure your infrastructure scales with your business growth.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Strategic IT Planning</h3>
-                    <p>Monthly reporting on system health and strategic recommendations to align your IT infrastructure with business objectives.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Zabbix</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Prometheus</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Grafana</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Ansible</span>
-            </div>
+<section class="service-section-alt" id="managed">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Managed IT Services</span>
+        <h2>Proactive support — not reactive firefighting</h2>
+        <p>24/7 monitoring, proactive maintenance, and rapid response. We catch and resolve issues before they impact your operations, not after your users start calling.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">Zabbix</span><span class="service-tag">Prometheus</span><span class="service-tag">Grafana</span><span class="service-tag">Ansible</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>24/7 infrastructure monitoring with Zabbix and Prometheus</li>
+        <li>Automated alerting with on-call escalation for critical incidents</li>
+        <li>Regular patching, updates, and preventive maintenance</li>
+        <li>Endpoint management: workstations, servers, and mobile devices</li>
+        <li>Help desk support with clear SLAs</li>
+        <li>Capacity planning and performance trend analysis</li>
+        <li>Monthly reporting and strategic IT planning</li>
+        <li>Asset inventory and lifecycle management</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Cloud Solutions -->
-    <section class="services" id="cloud">
-        <div class="section-container">
-            <h2 class="section-title">Cloud Solutions</h2>
-            <p class="section-subtitle">Expert guidance for cloud migration and management</p>
-            
-            <div style="max-width: 900px; margin: 0 auto 3rem;">
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Leverage the power of cloud computing with our Azure and AWS expertise. We handle everything from initial planning to ongoing optimization, ensuring your cloud infrastructure is secure, scalable, and cost-effective.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Cloud Strategy & Planning</h3>
-                    <p>Comprehensive assessment and migration planning to ensure a smooth transition to the cloud with minimal business disruption.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Azure & AWS Infrastructure</h3>
-                    <p>Expert design, deployment, and management of cloud infrastructure on Microsoft Azure and Amazon Web Services platforms.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Office 365 Administration</h3>
-                    <p>Complete Office 365 setup, configuration, and ongoing management including Exchange, SharePoint, and Teams optimization.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Hybrid Cloud Integration</h3>
-                    <p>Seamless integration between on-premise systems and cloud resources for flexible, scalable infrastructure that meets your specific needs.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Cloud Security & Compliance</h3>
-                    <p>Implementation of security best practices, compliance frameworks, and identity management with Azure AD and IAM.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Cost Optimization</h3>
-                    <p>Right-sizing resources and eliminating waste to maximize your cloud investment ROI with ongoing cost monitoring and optimization.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Microsoft Azure</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">AWS</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Office 365</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Azure AD</span>
-            </div>
+<section id="cloud">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Cloud Solutions</span>
+        <h2>Cloud infrastructure that's secure and cost-effective</h2>
+        <p>From migration planning to ongoing optimization — we manage your Azure and AWS environments so you get the benefits of cloud without the overhead of figuring it out yourself.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">Microsoft Azure</span><span class="service-tag">AWS</span><span class="service-tag">Microsoft 365</span><span class="service-tag">Azure Entra ID</span><span class="service-tag">Azure Arc</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>Cloud strategy, assessment, and migration planning</li>
+        <li>Azure and AWS infrastructure design, deployment, and management</li>
+        <li>Microsoft 365 setup, configuration, and ongoing administration</li>
+        <li>Hybrid integration: on-prem to cloud, seamlessly</li>
+        <li>Azure Arc enrollment for on-prem server management via Azure portal</li>
+        <li>Identity management: Azure Entra ID, SSO, and MFA rollouts</li>
+        <li>Cloud security posture management and compliance enforcement</li>
+        <li>Cost optimization: right-sizing, reserved instances, budget alerting</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Cybersecurity -->
-    <section class="contact" style="padding: 5rem 2rem;" id="security">
-        <div class="section-container">
-            <h2 class="section-title">Cybersecurity & Compliance</h2>
-            <p class="section-subtitle">Protect your business with enterprise-grade security solutions</p>
-            
-            <div style="max-width: 900px; margin: 0 auto 3rem;">
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Safeguard your business with comprehensive security solutions and compliance frameworks. We implement defense-in-depth strategies combining technology, policies, and training to protect against evolving threats.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Next-Gen Firewalls</h3>
-                    <p>Deployment and management of Sophos and Palo Alto next-generation firewalls with advanced threat prevention and application control.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Compliance Management</h3>
-                    <p>PCI DSS and HIPAA compliance consulting, implementation, and ongoing management to meet regulatory requirements.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Security Awareness Training</h3>
-                    <p>Comprehensive staff training programs to build security awareness and reduce human-factor vulnerabilities in your organization.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Identity & Access Management</h3>
-                    <p>Enterprise password management and multi-factor authentication deployment to secure access to critical systems and data.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Vulnerability Management</h3>
-                    <p>Regular vulnerability assessments and penetration testing to identify and remediate security weaknesses before they're exploited.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Incident Response Planning</h3>
-                    <p>Development of security policies, incident response procedures, and disaster recovery plans to ensure business continuity.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Sophos</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Palo Alto</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">PCI Compliance</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">HIPAA</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">MFA</span>
-            </div>
+<section class="service-section-alt" id="security">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Cybersecurity & Compliance</span>
+        <h2>Defense-in-depth for real-world threats</h2>
+        <p>Layered security combining technology, policy, and training. PCI DSS and HIPAA compliance built into the architecture from the start — not bolted on after an audit.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">Palo Alto</span><span class="service-tag">Sophos</span><span class="service-tag">PCI DSS</span><span class="service-tag">HIPAA</span><span class="service-tag">MFA</span><span class="service-tag">EDR</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>Next-gen firewall deployment: Palo Alto and Sophos platforms</li>
+        <li>PCI DSS and HIPAA compliance consulting, implementation, and audit prep</li>
+        <li>Security awareness training for staff at all levels</li>
+        <li>Enterprise password management and MFA deployment</li>
+        <li>Vulnerability assessments and remediation planning</li>
+        <li>Incident response planning and tabletop exercises</li>
+        <li>Security policy development and regulatory alignment</li>
+        <li>Endpoint detection and response (EDR) deployment and management</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Infrastructure Automation -->
-    <section class="services" id="automation">
-        <div class="section-container">
-            <h2 class="section-title">Infrastructure Automation</h2>
-            <p class="section-subtitle">Streamline operations with intelligent automation</p>
-            
-            <div style="max-width: 900px; margin: 0 auto 3rem;">
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Reduce manual effort and human error with infrastructure automation. We implement Infrastructure as Code practices using Ansible and Python to ensure consistent, repeatable deployments across your environment.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Ansible Deployment</h3>
-                    <p>Automated configuration management and application deployment ensuring consistency across all your systems.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Infrastructure as Code</h3>
-                    <p>Version-controlled infrastructure definitions allowing rapid provisioning and easy rollback of changes.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Python Scripting</h3>
-                    <p>Custom automation scripts for workflow optimization, data processing, and system integration tasks.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>CI/CD Integration</h3>
-                    <p>Automated testing and deployment pipelines to accelerate development and reduce time to production.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Ansible</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Python</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Terraform</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Git</span>
-            </div>
+<section id="automation">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Infrastructure Automation</span>
+        <h2>Consistent deployments, zero configuration drift</h2>
+        <p>Infrastructure as Code using Ansible and Python — every configuration change is version-controlled, repeatable, and reversible. No more "works on this one server" problems.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">Ansible</span><span class="service-tag">Python</span><span class="service-tag">Terraform</span><span class="service-tag">GitHub Actions</span><span class="service-tag">CI/CD</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>Ansible playbooks for configuration management and deployment</li>
+        <li>Infrastructure as Code with version control and change tracking</li>
+        <li>Python scripting for workflow automation and system integration</li>
+        <li>CI/CD pipeline setup for infrastructure changes</li>
+        <li>Automated testing and validation before deployment</li>
+        <li>Drift detection and automated remediation</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Documentation & Monitoring -->
-    <section class="contact" style="padding: 5rem 2rem;" id="monitoring">
-        <div class="section-container">
-            <h2 class="section-title">Documentation & Monitoring</h2>
-            <p class="section-subtitle">Complete visibility into your IT environment</p>
-            
-            <div style="max-width: 900px; margin: 0 auto 3rem;">
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Comprehensive infrastructure documentation and monitoring solutions give you complete visibility into your IT environment. We use industry-leading tools to ensure you always know the state of your infrastructure.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>NetBox Documentation</h3>
-                    <p>Complete infrastructure documentation including network diagrams, IP address management, and equipment inventory.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Network Monitoring</h3>
-                    <p>Real-time monitoring of network devices, bandwidth utilization, and performance metrics to ensure optimal operation.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Application Monitoring</h3>
-                    <p>End-to-end application performance monitoring to identify bottlenecks and ensure user satisfaction.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Capacity Planning</h3>
-                    <p>Historical trend analysis and forecasting to plan infrastructure growth and prevent capacity issues.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">NetBox</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Zabbix</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Prometheus</span>
-                <span style="background: #0f0f0f; color: #00aaff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.9rem; border: 1px solid #222;">Grafana</span>
-            </div>
+<section class="service-section-alt" id="monitoring">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Documentation & Monitoring</span>
+        <h2>Complete visibility — from day one</h2>
+        <p>You can't manage what you can't see. We implement monitoring and documentation from the start so your team always has a clear, current picture of the environment.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">NetBox</span><span class="service-tag">Zabbix</span><span class="service-tag">Prometheus</span><span class="service-tag">Grafana</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>NetBox setup: IP management, rack diagrams, device inventory</li>
+        <li>Real-time network monitoring with dashboards and alerting</li>
+        <li>Application performance monitoring end-to-end</li>
+        <li>Log aggregation and centralized log management</li>
+        <li>Capacity planning with historical trend analysis</li>
+        <li>Runbooks and standard operating procedures</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="services" style="padding: 5rem 2rem;">
-        <div class="section-container" style="text-align: center;">
-            <h2 class="section-title">Ready to Get Started?</h2>
-            <p class="section-subtitle">Let's discuss how our services can support your business with reliable, scalable IT infrastructure.</p>
-            <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
-                <a href="index.html#contact" class="primary-btn">Schedule a Consultation</a>
-                <a href="case-studies.html" class="secondary-btn">View Case Studies</a>
-            </div>
+<section id="web">
+  <div class="container">
+    <div class="service-detail">
+      <div class="service-detail-header reveal">
+        <span class="eyebrow">Web Development & Hosting</span>
+        <h2>Modern websites built on infrastructure we actually know</h2>
+        <p>We design and build websites and web applications on Azure Static Web Apps — the same platform we use for clients like Bradley's Saving Grace. Fast, secure, globally distributed, and often free to host for nonprofits and small organizations.</p>
+        <div class="service-tag-row">
+          <span class="service-tag">Azure Static Web Apps</span><span class="service-tag">GitHub Actions</span><span class="service-tag">Azure Functions</span><span class="service-tag">Custom Domains</span><span class="service-tag">SSL / HTTPS</span>
         </div>
-    </section>
+      </div>
+      <ul class="service-feature-list reveal reveal-delay-1">
+        <li>Custom website design and development — no templates, no page builders</li>
+        <li>Azure Static Web Apps with global CDN and automatic HTTPS</li>
+        <li>GitHub Actions CI/CD pipeline — every commit deploys automatically</li>
+        <li>Azure Functions backend for contact forms, APIs, and dynamic features</li>
+        <li>Custom domain setup with DNS configuration and SSL</li>
+        <li>Free hosting tier for nonprofits and small organizations on Azure</li>
+        <li>Dev and staging environments for testing before going live</li>
+        <li>Ongoing maintenance, content updates, and performance monitoring</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Packet Point Technologies</h3>
-                <p>Professional IT infrastructure and managed services for growing businesses.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="services.html#network">Network Infrastructure</a>
-                <a href="services.html#managed">Managed IT Services</a>
-                <a href="services.html#cloud">Cloud Solutions</a>
-                <a href="services.html#security">Cybersecurity</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Company</h3>
-                <a href="about.html">About Us</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="index.html#contact">Contact</a>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
-        </div>
-    </footer>
+<div class="cta-band">
+  <div class="cta-band-glow"></div>
+  <div class="container">
+    <h2>Not sure where to start?</h2>
+    <p>Tell us about your environment and we'll put together a clear, honest assessment and action plan.</p>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="index.html#contact" class="btn btn-primary btn-lg">Schedule a Free Consultation</a>
+      <a href="case-studies.html" class="btn btn-secondary btn-lg">See Our Work</a>
+    </div>
+  </div>
+</div>
 
-    <script src="js/main.js"></script>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
+        </a>
+        <p>Enterprise IT infrastructure and managed services for growing businesses in Northeast Ohio and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#network">Network Infrastructure</a>
+        <a href="#managed">Managed IT</a>
+        <a href="#cloud">Cloud Solutions</a>
+        <a href="#security">Cybersecurity</a>
+        <a href="#automation">Automation</a>
+        <a href="#web">Web Development</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="packetpointtechnologies@gmail.com">packetpointtechnologies@gmail.com</a>
+        <a href="tel:+13303475329">(330) 347-5329</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Packet Point Technologies LLC. All rights reserved.</span>
+      <span>Powered by Caffeine</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

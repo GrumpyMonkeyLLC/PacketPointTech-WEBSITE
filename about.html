@@ -1,189 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Packet Point Technologies</title>
-    <meta name="description" content="Learn about Packet Point Technologies - our story, values, and commitment to enterprise IT infrastructure excellence.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Packet Point Technologies</title>
+  <meta name="description" content="Learn about Packet Point Technologies — our story, values, and commitment to enterprise IT infrastructure excellence in Northeast Ohio.">
+  <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div class="loader">
-        <div class="loader-spinner"></div>
+
+<div class="loader"><div class="loader-ring"></div></div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">☀️</button>
+      <a href="index.html#contact" class="nav-cta">Get a Free Consultation</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
     </div>
+  </nav>
+</header>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Packet Point Technologies</a>
-            <ul class="nav-links">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#technologies">Technologies</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <a href="index.html#contact" class="cta-button">Get Started</a>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-        </nav>
-    </header>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html">About</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>About Packet Point Technologies</h1>
-        <p>Building reliable IT infrastructure with expertise, integrity, and a commitment to your success</p>
-    </section>
+<section class="page-hero">
+  <div class="hero-bg-grid"></div>
+  <div class="container">
+    <span class="eyebrow">About Us</span>
+    <h1>Built on doing things right</h1>
+    <p>We started Packet Point Technologies because businesses deserve IT partners who are technically honest, document everything, and stick around after the project closes.</p>
+  </div>
+</section>
 
-    <!-- Our Story Section -->
-    <section class="services">
-        <div class="section-container">
-            <h2 class="section-title">Our Story</h2>
-            <p class="section-subtitle">Founded on a commitment to excellence and transparency</p>
-            
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="service-card" style="margin-bottom: 2rem;">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Packet Point Technologies was founded on a simple principle: businesses deserve IT infrastructure that works reliably, scales seamlessly, and is backed by genuine expertise. We've built our reputation by delivering enterprise-grade solutions with a focus on transparency, documentation, and long-term partnerships.
-                    </p>
-                </div>
-                
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        From network infrastructure to cloud solutions, we combine deep technical knowledge with practical business understanding. Our team brings years of experience working with everything from small business networks to complex enterprise environments, and we apply that expertise to every client engagement.
-                    </p>
-                </div>
-            </div>
+<!-- Story -->
+<section>
+  <div class="container">
+    <div class="about-story">
+      <div class="story-text reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2 style="margin-bottom:1.25rem;">Founded on transparency and technical honesty</h2>
+        <p>Packet Point Technologies was built on a straightforward premise: businesses deserve IT infrastructure that works reliably, scales without drama, and is backed by genuine technical expertise — not sales pitches or vendor lock-in.</p>
+        <p>We bring hands-on enterprise experience across BGP-routed campus networks, hybrid Azure deployments, compliance-driven environments, and large-scale switching projects — and we apply that same depth of knowledge to every client engagement, regardless of size or budget.</p>
+        <p>Our approach has always been documentation-first. Every project ships with complete infrastructure documentation, knowledge transfer to your team, and monitoring configured before we walk out the door. You should understand your own environment — that's non-negotiable for us.</p>
+        <p>Based in Northeast Ohio, we work with municipalities, nonprofits, and growing businesses that need infrastructure and a web presence they can count on.</p>
+      </div>
+      <div class="about-stats-panel reveal reveal-delay-1">
+        <div class="about-stat-item">
+          <div class="about-stat-value">100<span>+</span></div>
+          <div class="about-stat-label">Switches deployed in production environments</div>
         </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="contact" style="padding: 5rem 2rem;">
-        <div class="section-container">
-            <h2 class="section-title" style="text-align: center;">Our Values</h2>
-            <p class="section-subtitle" style="text-align: center;">The principles that guide everything we do</p>
-            
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Technical Excellence</h3>
-                    <p>We stay current with the latest technologies and best practices, continuously expanding our expertise to deliver cutting-edge solutions that stand the test of time.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Transparency</h3>
-                    <p>Clear communication, comprehensive documentation, and honest assessments. You'll always know what we're doing and why we're doing it.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Reliability</h3>
-                    <p>Your infrastructure should work when you need it. We build systems with redundancy, monitoring, and proactive maintenance to minimize downtime.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Partnership Approach</h3>
-                    <p>We're not just vendors—we're partners in your success. Your goals become our goals, and we're committed to supporting your growth.</p>
-                </div>
-            </div>
+        <div class="about-stat-item">
+          <div class="about-stat-value">99.99<span>%</span></div>
+          <div class="about-stat-label">Network uptime on the Wadsworth migration</div>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="services">
-        <div class="section-container">
-            <h2 class="section-title" style="text-align: center;">Our Expertise</h2>
-            <p class="section-subtitle" style="text-align: center;">Experience you can count on</p>
-            
-            <div class="service-grid" style="max-width: 1000px; margin: 0 auto;">
-                <div class="service-card" style="text-align: center;">
-                    <h3 style="font-size: 3rem; color: #00aaff; margin-bottom: 0.5rem;">15+</h3>
-                    <p style="font-size: 1.1rem;">Years Combined Experience</p>
-                </div>
-                
-                <div class="service-card" style="text-align: center;">
-                    <h3 style="font-size: 3rem; color: #00aaff; margin-bottom: 0.5rem;">50+</h3>
-                    <p style="font-size: 1.1rem;">Clients Served</p>
-                </div>
-                
-                <div class="service-card" style="text-align: center;">
-                    <h3 style="font-size: 3rem; color: #00aaff; margin-bottom: 0.5rem;">99.9%</h3>
-                    <p style="font-size: 1.1rem;">Uptime Guarantee</p>
-                </div>
-                
-                <div class="service-card" style="text-align: center;">
-                    <h3 style="font-size: 3rem; color: #00aaff; margin-bottom: 0.5rem;">24/7</h3>
-                    <p style="font-size: 1.1rem;">Monitoring & Support</p>
-                </div>
-            </div>
+        <div class="about-stat-value" style="display:none;"></div>
+        <div class="about-stat-item">
+          <div class="about-stat-value">$0</div>
+          <div class="about-stat-label">Azure hosting cost for Bradley's Saving Grace nonprofit</div>
         </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="contact" style="padding: 5rem 2rem;">
-        <div class="section-container">
-            <h2 class="section-title" style="text-align: center;">Why Choose Us</h2>
-            
-            <div style="max-width: 900px; margin: 2rem auto;">
-                <div class="service-card" style="margin-bottom: 2rem;">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        In a crowded IT services market, we differentiate ourselves through our commitment to doing things right. We don't cut corners, we don't oversell, and we don't leave you with systems you can't understand or maintain.
-                    </p>
-                </div>
-                
-                <div class="service-card" style="margin-bottom: 2rem;">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Every project includes comprehensive documentation, knowledge transfer, and ongoing support. We use industry-leading tools like NetBox for infrastructure documentation, Zabbix and Prometheus for monitoring, and Ansible for automation—ensuring your environment is well-managed and transparent.
-                    </p>
-                </div>
-                
-                <div class="service-card">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
-                        Whether you need a complete network overhaul, cloud migration support, or ongoing managed services, we bring the same level of professionalism and attention to detail to every engagement.
-                    </p>
-                </div>
-            </div>
+        <div class="about-stat-item">
+          <div class="about-stat-value">24<span>/7</span></div>
+          <div class="about-stat-label">Monitoring and on-call response</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="services" style="padding: 5rem 2rem;">
-        <div class="section-container" style="text-align: center;">
-            <h2 class="section-title">Ready to Work Together?</h2>
-            <p class="section-subtitle">Let's discuss how we can support your IT infrastructure needs with reliable, scalable solutions.</p>
-            <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
-                <a href="index.html#contact" class="primary-btn">Schedule a Consultation</a>
-            </div>
-        </div>
-    </section>
+<!-- Values -->
+<section style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="eyebrow">Our Values</span>
+      <h2>What guides every engagement</h2>
+      <p>The principles behind every recommendation, every architecture decision, and every line of documentation we write.</p>
+    </div>
+    <div class="values-grid reveal reveal-delay-1">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <h3>Technical honesty</h3>
+        <p>We tell you what you need to hear, not what's easiest to sell. If a simpler solution solves the problem, that's what we recommend — even if it means less work for us.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <h3>Documentation as a deliverable</h3>
+        <p>Every project ships with complete documentation. Network diagrams, runbooks, IP addressing, device configs — all of it, always. Your team should be able to work without us.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <h3>Reliability by design</h3>
+        <p>Redundancy, monitoring, and failover aren't afterthoughts. They're architectural requirements we build in from the start, not features we sell you later.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">04</div>
+        <h3>Long-term thinking</h3>
+        <p>We design for where your business is going in three years, not just where it is today. Scalability and maintainability are first-class requirements on every project.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Packet Point Technologies</h3>
-                <p>Professional IT infrastructure and managed services for growing businesses.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <a href="index.html#services">Network Infrastructure</a>
-                <a href="index.html#services">Managed IT Services</a>
-                <a href="index.html#services">Cloud Solutions</a>
-                <a href="index.html#services">Cybersecurity</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Company</h3>
-                <a href="about.html">About Us</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="index.html#contact">Contact</a>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Packet Point Technologies LLC. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Expertise -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Expertise</span>
+      <h2>What we know in production</h2>
+      <p>Not a generalist shop. Deep expertise across the technologies your infrastructure actually runs on — configured in real environments, not just studied for a certification.</p>
+    </div>
+    <div class="service-grid reveal reveal-delay-1">
+      <div class="service-card">
+        <div class="service-card-icon">🌐</div>
+        <h3>Enterprise Networking</h3>
+        <p>Cisco, Arista, Ruckus. BGP, OSPF, STP. Campus switching at scale, WAN design, wireless. Deployed in production — not just in a lab.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">☁️</div>
+        <h3>Cloud & Hybrid</h3>
+        <p>Azure and AWS architecture, Microsoft 365, Azure Arc, hybrid AD/Entra environments, cost management, and cloud security posture.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🔒</div>
+        <h3>Security & Compliance</h3>
+        <p>Palo Alto and Sophos firewalls, PCI DSS and HIPAA compliance programs, identity management, vulnerability management, and incident response.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">⚙️</div>
+        <h3>Automation & IaC</h3>
+        <p>Ansible, Python, Terraform, and GitHub Actions. Version-controlled infrastructure, repeatable deployments, CI/CD pipelines for config changes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">📊</div>
+        <h3>Monitoring & Observability</h3>
+        <p>Zabbix, Prometheus, and Grafana. Full-stack visibility from network layer to application layer, with alerting that makes operational sense.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🖥️</div>
+        <h3>Web Development & Hosting</h3>
+        <p>Azure Static Web Apps, Azure Functions, GitHub Actions CI/CD. Custom sites built for performance with zero-cost hosting for qualifying nonprofits.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="js/main.js"></script>
+<div class="cta-band">
+  <div class="cta-band-glow"></div>
+  <div class="container">
+    <h2>Ready to work together?</h2>
+    <p>Let's talk about your infrastructure and put together a plan that fits your business and your budget.</p>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="index.html#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+      <a href="services.html" class="btn btn-secondary btn-lg">View Services</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
+        </a>
+        <p>Enterprise IT infrastructure and managed services for growing businesses in Northeast Ohio and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html#network">Network Infrastructure</a>
+        <a href="services.html#managed">Managed IT</a>
+        <a href="services.html#cloud">Cloud Solutions</a>
+        <a href="services.html#security">Cybersecurity</a>
+        <a href="services.html#automation">Automation</a>
+        <a href="services.html#web">Web Development</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:packetpointtechnologies@gmail.com">packetpointtechnologies@gmail.com</a>
+        <a href="tel:+13303475329">(330) 347-5329</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Packet Point Technologies LLC. All rights reserved.</span>
+      <span>Powered by Caffeine</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
