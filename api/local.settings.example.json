@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "ACS_CONNECTION_STRING": "endpoint=https://<your-acs-resource>.communication.azure.com/;accesskey=<key>",
+    "EMAIL_SENDER": "DoNotReply@<your-verified-domain>",
+    "CONTACT_TO": "packetpointtechnologies@gmail.com",
+    "HCAPTCHA_SECRET": "<your-hcaptcha-secret>"
+  }
+}

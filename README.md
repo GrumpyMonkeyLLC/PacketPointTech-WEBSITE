@@ -61,14 +61,44 @@ packet-point-website/
 4. Connect your GitHub repository
 5. Set build configuration:
    - **App location:** `/`
-   - **Api location:** (leave empty)
+   - **Api location:** `api`
    - **Output location:** (leave empty)
 6. Azure will automatically build and deploy your site
 7. Your site will be live at `https://[your-app-name].azurestaticapps.net`
 
 The included `staticwebapp.config.json` file handles routing and caching automatically.
 
+### Contact Form Setup
+
+The contact form posts to an Azure Function (`api/src/functions/contact.js`) that verifies an
+hCaptcha token and sends the message from a no-reply address via Azure Communication Services
+(ACS) Email. No Microsoft 365 license is required.
+
+1. **hCaptcha:** create a free account at [hcaptcha.com](https://www.hcaptcha.com), add your site's
+   domain(s), then put the **site key** in `index.html` (replace `YOUR_HCAPTCHA_SITE_KEY`). Keep the
+   **secret** for step 4.
+2. **Email Communication Service:** in the Azure Portal, create an *Email Communication Service*
+   resource and add a domain. Either use the free Azure-managed domain
+   (`DoNotReply@<id>.azurecomm.net`) or add a custom domain (e.g. `packetpointtechnologies.com`) and
+   create the SPF/DKIM DNS records it shows so you can send from `DoNotReply@yourdomain`.
+3. **Communication Service:** create a *Communication Services* resource and connect the email
+   domain to it (Email → Domains → Connect domain). Copy its connection string from *Keys*.
+4. **App settings:** in the Static Web App, go to *Settings → Environment variables* and add these
+   (for both production and preview environments):
+
+   | Name | Value |
+   |---|---|
+   | `ACS_CONNECTION_STRING` | Communication Services connection string |
+   | `EMAIL_SENDER` | e.g. `DoNotReply@packetpointtechnologies.com` |
+   | `CONTACT_TO` | Inbox that should receive messages |
+   | `HCAPTCHA_SECRET` | hCaptcha secret key |
+
+Replies to a contact email go straight to the visitor (the function sets `Reply-To`).
+Run the API tests with `cd api && npm install && npm test`.
+
 ### GitHub Pages
+Note: GitHub Pages cannot run the contact form API; use Azure Static Web Apps for a working form.
+
 1. Push to GitHub
 2. Go to Settings > Pages
 3. Select branch and root folder
