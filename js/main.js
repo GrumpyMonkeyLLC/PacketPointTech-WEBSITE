@@ -79,3 +79,47 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Contact form ──────────────────────────────────────────────
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  const CONTACT_EMAIL = 'packetpointtechnologies@gmail.com';
+  const status = document.getElementById('form-status');
+  const setStatus = (msg, type) => {
+    status.textContent = msg;
+    status.className = 'form-status' + (type ? ' ' + type : '');
+  };
+
+  contactForm.addEventListener('input', (e) => e.target.classList.remove('invalid'));
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const field = (id) => contactForm.querySelector('#' + id);
+    const value = (id) => field(id).value.trim();
+
+    const invalid = ['name', 'email', 'message'].filter(id => !value(id) || !field(id).checkValidity());
+    contactForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+    if (invalid.length) {
+      invalid.forEach(id => field(id).classList.add('invalid'));
+      field(invalid[0]).focus();
+      setStatus('Please fill in your name, a valid email, and a message.', 'error');
+      return;
+    }
+
+    const name = value('name');
+    const company = value('company');
+    const service = value('service') || 'Not specified';
+    const subject = `Consultation request: ${name}${company ? ' (' + company + ')' : ''}`;
+    const body = [
+      `Name: ${name}`,
+      `Company: ${company || 'N/A'}`,
+      `Email: ${value('email')}`,
+      `Service: ${service}`,
+      '',
+      value('message'),
+    ].join('\n');
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus(`Opening your email app… If nothing happens, email us directly at ${CONTACT_EMAIL}.`, 'success');
+  });
+}
