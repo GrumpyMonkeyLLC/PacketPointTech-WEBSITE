@@ -79,4 +79,4 @@ Upload all files to your web host, maintaining the folder structure.
 
 ## Contact
 
-For updates or issues, contact info@packetpointtechnologies.com
+For updates or issues, contact support@packetpointtechnologies.com
