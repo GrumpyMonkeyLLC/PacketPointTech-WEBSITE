@@ -1,24 +1,19 @@
 {
-  "platform": {
-    "apiRuntime": "node:20"
-  },
   "routes": [
     {
       "route": "/images/*",
       "headers": {
         "cache-control": "public, max-age=604800"
       }
-    },
-    {
-      "route": "/api/*",
-      "headers": {
-        "cache-control": "no-store"
-      }
     }
   ],
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/images/*", "/css/*", "/js/*", "/api/*"]
+    "exclude": [
+      "/images/*",
+      "/css/*",
+      "/js/*"
+    ]
   },
   "mimeTypes": {
     ".json": "application/json",

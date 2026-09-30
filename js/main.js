@@ -80,7 +80,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── Contact form (Azure Function + hCaptcha) ──────────────────
+// ── Contact form (Web3Forms + hCaptcha) ───────────────────────
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   const CONTACT_EMAIL = 'packetpointtechnologies@gmail.com';
@@ -113,12 +113,15 @@ if (contactForm) {
       return;
     }
 
+    const name = value('name');
+    const company = value('company');
+    data.subject = `Consultation request: ${name}${company ? ' (' + company + ')' : ''}`;
     data.service = value('service') || 'Not specified';
 
     submitBtn.disabled = true;
     setStatus('Sending…');
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data),
