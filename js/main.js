@@ -83,7 +83,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // ── Contact form (Web3Forms + hCaptcha) ───────────────────────
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  const CONTACT_EMAIL = 'packetpointtechnologies@gmail.com';
+  const CONTACT_EMAIL = 'zach@packetpointtechnologies.com';
   const status = document.getElementById('form-status');
   const submitBtn = contactForm.querySelector('.btn-submit');
   const setStatus = (msg, type) => {
