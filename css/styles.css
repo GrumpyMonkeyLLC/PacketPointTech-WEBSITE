@@ -410,6 +410,14 @@ nav { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; height: 68px
 .form-group select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238892aa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; padding-right: 2.5rem; }
 .form-group select option { background: var(--bg-2); }
 .btn-submit { width: 100%; justify-content: center; margin-top: 0.25rem; }
+.form-group .invalid { border-color: #ef4444; }
+.form-group .invalid:focus { box-shadow: 0 0 0 3px rgba(239,68,68,0.2); }
+.form-honeypot { display: none !important; }
+.form-captcha { margin: 0.25rem 0 0.75rem; }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.form-status { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; min-height: 1.2em; }
+.form-status.error { color: #ef4444; }
+.form-status.success { color: var(--green); }
 
 /* ─── CTA Band ───────────────────────────────────────────────── */
 .cta-band { background: linear-gradient(135deg, #0a1628 0%, #0f2048 50%, #0a1628 100%); border-top: 1px solid var(--border); padding: 5.5rem 0; text-align: center; position: relative; overflow: hidden; }

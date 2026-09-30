@@ -79,3 +79,63 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Contact form (Web3Forms + hCaptcha) ───────────────────────
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  const CONTACT_EMAIL = 'zach@packetpointtechnologies.com';
+  const status = document.getElementById('form-status');
+  const submitBtn = contactForm.querySelector('.btn-submit');
+  const setStatus = (msg, type) => {
+    status.textContent = msg;
+    status.className = 'form-status' + (type ? ' ' + type : '');
+  };
+
+  contactForm.addEventListener('input', (e) => e.target.classList.remove('invalid'));
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const field = (id) => contactForm.querySelector('#' + id);
+    const value = (id) => field(id).value.trim();
+
+    const invalid = ['name', 'email', 'message'].filter(id => !value(id) || !field(id).checkValidity());
+    contactForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+    if (invalid.length) {
+      invalid.forEach(id => field(id).classList.add('invalid'));
+      field(invalid[0]).focus();
+      setStatus('Please fill in your name, a valid email, and a message.', 'error');
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(contactForm));
+    if (!data['h-captcha-response']) {
+      setStatus('Please complete the captcha.', 'error');
+      return;
+    }
+
+    const name = value('name');
+    const company = value('company');
+    data.subject = `Consultation request: ${name}${company ? ' (' + company + ')' : ''}`;
+    data.service = value('service') || 'Not specified';
+
+    submitBtn.disabled = true;
+    setStatus('Sending…');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error(json.message || `HTTP ${res.status}`);
+      contactForm.reset();
+      setStatus("Thanks! Your message has been sent. We'll be in touch shortly.", 'success');
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setStatus(`Sorry, something went wrong. Please email us directly at ${CONTACT_EMAIL}.`, 'error');
+    } finally {
+      if (window.hcaptcha) { try { window.hcaptcha.reset(); } catch (_) {} }
+      submitBtn.disabled = false;
+    }
+  });
+}
