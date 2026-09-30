@@ -80,11 +80,12 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── Contact form ──────────────────────────────────────────────
+// ── Contact form (Web3Forms + hCaptcha) ───────────────────────
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   const CONTACT_EMAIL = 'packetpointtechnologies@gmail.com';
   const status = document.getElementById('form-status');
+  const submitBtn = contactForm.querySelector('.btn-submit');
   const setStatus = (msg, type) => {
     status.textContent = msg;
     status.className = 'form-status' + (type ? ' ' + type : '');
@@ -92,7 +93,7 @@ if (contactForm) {
 
   contactForm.addEventListener('input', (e) => e.target.classList.remove('invalid'));
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const field = (id) => contactForm.querySelector('#' + id);
     const value = (id) => field(id).value.trim();
@@ -106,20 +107,35 @@ if (contactForm) {
       return;
     }
 
+    const data = Object.fromEntries(new FormData(contactForm));
+    if (!data['h-captcha-response']) {
+      setStatus('Please complete the captcha.', 'error');
+      return;
+    }
+
     const name = value('name');
     const company = value('company');
-    const service = value('service') || 'Not specified';
-    const subject = `Consultation request: ${name}${company ? ' (' + company + ')' : ''}`;
-    const body = [
-      `Name: ${name}`,
-      `Company: ${company || 'N/A'}`,
-      `Email: ${value('email')}`,
-      `Service: ${service}`,
-      '',
-      value('message'),
-    ].join('\n');
+    data.subject = `Consultation request: ${name}${company ? ' (' + company + ')' : ''}`;
+    data.service = value('service') || 'Not specified';
 
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setStatus(`Opening your email app… If nothing happens, email us directly at ${CONTACT_EMAIL}.`, 'success');
+    submitBtn.disabled = true;
+    setStatus('Sending…');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error(json.message || `HTTP ${res.status}`);
+      contactForm.reset();
+      setStatus("Thanks! Your message has been sent. We'll be in touch shortly.", 'success');
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setStatus(`Sorry, something went wrong. Please email us directly at ${CONTACT_EMAIL}.`, 'error');
+    } finally {
+      if (window.hcaptcha) { try { window.hcaptcha.reset(); } catch (_) {} }
+      submitBtn.disabled = false;
+    }
   });
 }
