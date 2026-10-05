@@ -32,10 +32,12 @@ Download the following logos and place them in `images/logos/`:
 ```
 packet-point-website/
 ├── index.html          # Main HTML file
+├── privacy.html        # Privacy policy (linked from every footer)
 ├── css/
 │   └── styles.css      # All styling
 ├── js/
 │   └── main.js         # JavaScript functionality
+├── fonts/              # Self-hosted Plus Jakarta Sans (SIL OFL 1.1)
 ├── images/
 │   └── logos/          # Company logos (SVG format)
 └── README.md           # This file

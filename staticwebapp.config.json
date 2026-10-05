@@ -5,6 +5,12 @@
       "headers": {
         "cache-control": "public, max-age=604800"
       }
+    },
+    {
+      "route": "/fonts/*",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     }
   ],
   "navigationFallback": {
@@ -12,12 +18,14 @@
     "exclude": [
       "/images/*",
       "/css/*",
-      "/js/*"
+      "/js/*",
+      "/fonts/*"
     ]
   },
   "mimeTypes": {
     ".json": "application/json",
-    ".svg": "image/svg+xml"
+    ".svg": "image/svg+xml",
+    ".woff2": "font/woff2"
   },
   "globalHeaders": {
     "cache-control": "no-cache"
