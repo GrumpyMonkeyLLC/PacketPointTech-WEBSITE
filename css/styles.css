@@ -403,3 +403,7 @@ a.work:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: in
   .packet { animation: none; display: none; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* About page photo */
+.about-photo { margin: 0 0 1.25rem; }
+.about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 85%; border-radius: 10px; }
