@@ -37,7 +37,7 @@ packet-point-website/
 │   └── styles.css      # All styling
 ├── js/
 │   └── main.js         # JavaScript functionality
-├── fonts/              # Self-hosted IBM Plex Sans + Plex Mono (SIL OFL 1.1)
+├── fonts/              # Self-hosted Archivo variable font (SIL OFL 1.1)
 ├── images/
 │   └── logos/          # Company logos (SVG format)
 └── README.md           # This file
@@ -45,7 +45,7 @@ packet-point-website/
 
 ## Notes
 
-- Light theme by default; follows the visitor's system dark mode, with a toggle in the header
+- Light sections with dark teal bands (matches the logo); follows the visitor's system dark mode, with a toggle in the header
 - Header and footer are repeated in each HTML file. If you change one, change them all
 - Contact form posts to Web3Forms with hCaptcha (see `js/main.js`)
 

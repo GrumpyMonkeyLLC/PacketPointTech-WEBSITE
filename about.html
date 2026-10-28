@@ -6,7 +6,7 @@
   <title>About | Packet Point Technologies</title>
   <meta name="description" content="Packet Point Technologies is a small IT and network engineering company in Rittman, Ohio, serving Northeast Ohio.">
   <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
-  <link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <script>try{var t=localStorage.getItem('ppt-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
@@ -15,31 +15,33 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand"><img src="images/ppt.jpg" alt="" width="40" height="40"><span>Packet Point Technologies</span></a>
+    <a href="index.html" class="brand"><img src="images/ppt.jpg" alt="" width="42" height="42"><span>Packet Point Technologies</span></a>
     <nav class="nav-links" id="nav-links" aria-label="Main">
       <a href="services.html">Services</a>
       <a href="case-studies.html">Our work</a>
       <a href="about.html" aria-current="page">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <a class="nav-phone" href="tel:+13303475329">(330) 347-5329</a>
+    <a class="nav-phone" href="tel:+13303475329" aria-label="Call (330) 347-5329"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(330) 347-5329</span></a>
     <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
     <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
   </div>
 </header>
 
 <main id="main">
-<section class="page-head">
+<section class="band page-head">
   <div class="wrap">
-    <h1>About</h1>
-    <p class="lead">Packet Point Technologies is a small IT and network engineering company in Rittman, Ohio. We work with municipalities, nonprofits, and growing businesses around Northeast Ohio.</p>
+    <span class="label">About</span>
+    <h1>A small IT company in Rittman, Ohio</h1>
+    <p class="lead">Packet Point Technologies does network engineering and IT support for municipalities, nonprofits, and growing businesses around Northeast Ohio.</p>
   </div>
 </section>
 
 <section class="section">
-  <div class="wrap split text-first">
+  <div class="wrap about-split">
     <div class="prose">
-      <h2>Why we started</h2>
+      <span class="label">Why we started</span>
+      <h2 style="margin-bottom:1.25rem">IT you can actually understand</h2>
       <p>We started Packet Point because too many organizations end up with IT they don&rsquo;t understand: a network installed by a vendor who has since moved on, no diagrams, and nobody who can say for sure what a given switch does. We wanted to be the kind of IT company we&rsquo;d hire ourselves.</p>
       <p>Our background is enterprise work: BGP-routed campus networks, hybrid Azure environments, compliance-heavy setups, and large switching projects. We bring the same care to a ten-person office that we would to a city network.</p>
       <p>Every project ends with documentation and a handoff. You should understand your own environment, and you shouldn&rsquo;t be stuck with us if you&rsquo;d rather not be.</p>
@@ -49,28 +51,31 @@
       <div><dt>Service area</dt><dd>Northeast Ohio, with remote work further out</dd></div>
       <div><dt>Clients</dt><dd>Municipalities, nonprofits, small and mid-sized businesses</dd></div>
       <div><dt>Contracts</dt><dd>Project work or month-to-month support</dd></div>
-      <div><dt>Contact</dt><dd><a href="tel:+13303475329">(330) 347-5329</a></dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+13303475329">(330) 347-5329</a></dd></div>
     </dl>
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="wrap">
-    <h2 style="margin-bottom:2.5rem">What we care about</h2>
+    <div class="section-head">
+      <span class="label">What we care about</span>
+      <h2>How we try to run things</h2>
+    </div>
     <div class="values">
-      <div>
+      <div class="value">
         <h3>Straight answers</h3>
         <p>We tell you what you need to hear, not what&rsquo;s easiest to sell. If a simpler fix solves the problem, that&rsquo;s the one we recommend, even when it means less work for us.</p>
       </div>
-      <div>
+      <div class="value">
         <h3>Documentation you actually get</h3>
         <p>Network diagrams, runbooks, IP addressing, device configs. All of it, on every project. Your team should be able to work without us.</p>
       </div>
-      <div>
+      <div class="value">
         <h3>Reliability built in</h3>
         <p>Redundancy, monitoring, and failover are part of the design from the start, not upgrades we try to sell you later.</p>
       </div>
-      <div>
+      <div class="value">
         <h3>Thinking a few years out</h3>
         <p>We plan for where you&rsquo;ll be in three years, not just next month, so the network doesn&rsquo;t need to be ripped out the moment you grow.</p>
       </div>
@@ -81,41 +86,40 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <div>
-        <h2>What we work with</h2>
-        <p>The platforms we use day to day, in production, not only in a lab.</p>
-      </div>
+      <span class="label">What we work with</span>
+      <h2>Tools we use in production</h2>
+      <p>The platforms we work with day to day on real networks, not only in a lab.</p>
     </div>
-    <div class="rows">
-      <div class="row"><h3>Networking</h3><p>Campus switching, WAN design, wireless, and routing with OSPF, BGP, and STP.</p><span class="mono">Cisco, Arista, Ruckus</span></div>
-      <div class="row"><h3>Cloud &amp; hybrid</h3><p>Azure and AWS, Microsoft 365, hybrid AD and Entra ID, cost management, and security posture.</p><span class="mono">Azure, AWS, M365, Arc</span></div>
-      <div class="row"><h3>Security &amp; compliance</h3><p>Firewalls, PCI DSS and HIPAA programs, identity, vulnerability management, and incident response.</p><span class="mono">Palo Alto, Sophos</span></div>
-      <div class="row"><h3>Automation</h3><p>Version-controlled configuration, repeatable deployments, and pipelines for config changes.</p><span class="mono">Ansible, Python, Terraform</span></div>
-      <div class="row"><h3>Monitoring</h3><p>Visibility from the network up to the application, with alerts that are worth waking up for.</p><span class="mono">Zabbix, Prometheus, Grafana</span></div>
-      <div class="row"><h3>Web</h3><p>Static sites and small backends on Azure with automatic deploys.</p><span class="mono">Azure SWA, Functions</span></div>
+    <div class="stack-list">
+      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4.5M12 12l-5.2 5.2M12 12l5.2 5.2"/></svg></div><h3>Networking</h3><p>Campus switching, WAN design, wireless, and routing with OSPF, BGP, and STP.</p><span class="tools">Cisco &middot; Arista &middot; Ruckus</span></div>
+      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5h10a4 4 0 0 0 .7-7.94A6 6 0 0 0 6.3 9.6 4.5 4.5 0 0 0 7 18.5z"/></svg></div><h3>Cloud &amp; hybrid</h3><p>Azure and AWS, Microsoft 365, hybrid AD and Entra ID, cost management, and security posture.</p><span class="tools">Azure &middot; AWS &middot; M365 &middot; Arc</span></div>
+      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 7.9-7 9.5-4.1-1.6-7-5.2-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Security &amp; compliance</h3><p>Firewalls, PCI DSS and HIPAA programs, identity, vulnerability management, and incident response.</p><span class="tools">Palo Alto &middot; Sophos</span></div>
+      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5.5l-3 13"/></svg></div><h3>Automation</h3><p>Version-controlled configuration, repeatable deployments, and pipelines for config changes.</p><span class="tools">Ansible &middot; Python &middot; Terraform</span></div>
+      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 16v-4M10.5 16V7M15 16v-6M19.5 16V4"/></svg></div><h3>Monitoring</h3><p>Visibility from the network up to the application, with alerts that are worth waking up for.</p><span class="tools">Zabbix &middot; Prometheus &middot; Grafana</span></div>
+      <div class="card"><div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 6.8h.01M9 6.8h.01"/></svg></div><h3>Web</h3><p>Static sites and small backends on Azure with automatic deploys.</p><span class="tools">Azure SWA &middot; Functions</span></div>
     </div>
   </div>
 </section>
 
-<div class="wrap page-end">
-  <div class="note">
+<section class="band cta">
+  <div class="wrap">
     <div>
       <h2>Want to talk?</h2>
       <p>Tell us about your setup and we&rsquo;ll put together a plan that fits your business and budget.</p>
     </div>
     <div class="actions">
-      <a href="index.html#contact" class="btn btn-primary">Get in touch</a>
-      <span class="aside">or call <a href="tel:+13303475329">(330) 347-5329</a></span>
+      <a href="index.html#contact" class="btn btn-primary">Get in touch <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a href="tel:+13303475329" class="btn btn-ghost"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> (330) 347-5329</a>
     </div>
   </div>
-</div>
+</section>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><img src="images/ppt.jpg" alt="" width="40" height="40">Packet Point Technologies</div>
+        <div class="foot-brand"><img src="images/ppt.jpg" alt="" width="42" height="42">Packet Point Technologies</div>
         <p>Network, cloud, and IT support for businesses, nonprofits, and municipalities in Northeast Ohio.</p>
       </div>
       <div>
