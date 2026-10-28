@@ -404,21 +404,3 @@ a.work:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: in
   .packet { animation: none; display: none; }
   *, *::before, *::after { transition: none !important; }
 }
-
-/* Field photos */
-.hero-photo img { aspect-ratio: 18 / 25; }
-.split .photo.tall img { aspect-ratio: 4 / 5; }
-.field-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
-.field-grid figure { margin: 0; }
-.field-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; transition: transform .25s; }
-.field-grid figure:hover img { transform: scale(1.02); }
-.field-grid figcaption { margin-top: 0.6rem; font-size: 0.93rem; color: var(--ink-2); }
-.photo.diagram { margin: 0 0 1.5rem; }
-.photo.diagram img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid var(--rule); }
-.photo.diagram figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--muted); }
-@media (max-width: 1000px) {
-  .hero-photo img { aspect-ratio: 4 / 3; object-position: center 70%; }
-  .field-grid { grid-template-columns: 1fr 1fr; }
-  .split .photo.tall img { aspect-ratio: 4 / 3; object-position: center 40%; }
-}
-@media (max-width: 520px) { .field-grid { grid-template-columns: 1fr; } }
