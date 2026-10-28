@@ -149,7 +149,15 @@ strong { color: var(--ink); font-weight: 650; }
 .icon-btn { background: none; border: 1px solid rgba(255,255,255,0.22); color: var(--band-ink); border-radius: 6px; height: 36px; min-width: 36px; padding: 0 0.6rem; cursor: pointer; font: inherit; font-size: 0.92rem; font-weight: 500; display: inline-grid; place-items: center; transition: border-color .15s, background .15s; }
 .icon-btn:hover { border-color: var(--cyan); background: rgba(98,212,227,0.08); }
 .icon-btn svg { width: 16px; height: 16px; }
-.menu-btn { display: none; }
+.menu-btn { display: none; width: 40px; height: 36px; padding: 0; }
+.bars { position: relative; display: block; width: 18px; height: 12px; }
+.bars span { position: absolute; left: 0; width: 100%; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s, opacity .2s, top .2s; }
+.bars span:nth-child(1) { top: 0; }
+.bars span:nth-child(2) { top: 5px; }
+.bars span:nth-child(3) { top: 10px; }
+.menu-btn[aria-expanded="true"] .bars span:nth-child(1) { top: 5px; transform: rotate(45deg); }
+.menu-btn[aria-expanded="true"] .bars span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] .bars span:nth-child(3) { top: 5px; transform: rotate(-45deg); }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 0.5rem; font: inherit; font-weight: 650; font-size: 1rem; padding: 0.8rem 1.4rem; border-radius: 6px; border: 1.5px solid transparent; text-decoration: none; cursor: pointer; line-height: 1.2; transition: background .15s, color .15s, border-color .15s, transform .15s; }

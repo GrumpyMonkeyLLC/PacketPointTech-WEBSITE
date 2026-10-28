@@ -24,7 +24,7 @@ if (menuBtn && navLinks) {
   const setOpen = (open) => {
     navLinks.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.textContent = open ? 'Close' : 'Menu';
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
   menuBtn.addEventListener('click', () => setOpen(!navLinks.classList.contains('open')));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
