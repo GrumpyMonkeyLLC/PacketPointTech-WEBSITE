@@ -3,272 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — Packet Point Technologies</title>
-  <meta name="description" content="Comprehensive IT services: network infrastructure, managed services, cloud solutions, cybersecurity, automation, and web development.">
+  <title>Services | Packet Point Technologies</title>
+  <meta name="description" content="Networking, managed IT, Azure and Microsoft 365, security and compliance, automation, monitoring, and website hosting.">
   <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
-  <link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('ppt-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="loader"><div class="loader-ring"></div></div>
-
-<header>
-  <nav>
-    <a href="index.html" class="logo">
-      <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="case-studies.html">Case Studies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">☀️</button>
-      <a href="index.html#contact" class="nav-cta">Get a Free Consultation</a>
-      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-    </div>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/ppt.jpg" alt="" width="42" height="42"><span>Packet Point Technologies</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="case-studies.html">Our work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+13303475329" aria-label="Call (330) 347-5329"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(330) 347-5329</span></a>
+    <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
 </header>
 
-<nav class="mobile-nav" id="mobile-nav">
-  <a href="services.html">Services</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="about.html">About</a>
-  <a href="index.html#contact">Contact</a>
-</nav>
-
-<section class="page-hero">
-  <div class="hero-bg-grid"></div>
-  <div class="container">
-    <span class="eyebrow">What We Do</span>
-    <h1>Services</h1>
-    <p>End-to-end IT infrastructure — from the network layer to cloud architecture, cybersecurity, and your web presence. One partner, full stack.</p>
+<main id="main">
+<section class="band page-head">
+  <div class="wrap">
+    <span class="label">Services</span>
+    <h1>What we can take off your plate</h1>
+    <p class="lead">From the cabling and switches to the cloud tenant and the website. You can hire us for one piece or all of it.</p>
+    <nav class="jump" aria-label="On this page">
+      <a href="#network">Networking</a>
+      <a href="#managed">Managed IT</a>
+      <a href="#cloud">Cloud &amp; M365</a>
+      <a href="#security">Security</a>
+      <a href="#automation">Automation</a>
+      <a href="#monitoring">Monitoring</a>
+      <a href="#web">Websites</a>
+    </nav>
   </div>
 </section>
 
-<section id="network">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Network Infrastructure</span>
-        <h2>Enterprise networking built for performance and reliability</h2>
-        <p>We design, deploy, and manage networks that deliver the performance, security, and reliability your business demands — from single-site deployments to complex multi-location architectures with full redundancy.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">Cisco IOS</span><span class="service-tag">Cisco Meraki</span><span class="service-tag">Arista EOS</span><span class="service-tag">Ruckus FastIron</span><span class="service-tag">Juniper JUNOS</span><span class="service-tag">Ubiquiti Unifi</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>Network design & architecture for single and multi-site environments</li>
-        <li>Enterprise switching & routing with Cisco, Arista, and Ruckus platforms</li>
-        <li>Advanced routing: OSPF, BGP, EIGRP configuration and optimization</li>
-        <li>Wireless design with coverage planning and secure guest access</li>
-        <li>VLAN segmentation for security isolation and traffic management</li>
-        <li>QoS for VoIP, video conferencing, and business-critical applications</li>
-        <li>Complete NetBox documentation — IP management, rack diagrams, inventory</li>
-        <li>24/7 monitoring and performance alerting from day one</li>
-      </ul>
+<section class="svc" id="network">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4.5M12 12l-5.2 5.2M12 12l5.2 5.2"/></svg></div>
+      <h2>Networking</h2>
+      <p>We design, install, and manage wired and wireless networks, from a single office to multi-site setups with redundant links. Everything we touch gets labeled, diagrammed, and entered into NetBox.</p>
+      <div class="chips"><span>Cisco IOS</span><span>Meraki</span><span>Arista EOS</span><span>Ruckus FastIron</span><span>Juniper Junos</span><span>UniFi</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Network design for single and multi-site environments</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Switching and routing on Cisco, Arista, and Ruckus</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>OSPF, BGP, and EIGRP configuration and cleanup</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Wi-Fi coverage planning and a separate, locked-down guest network</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>VLAN segmentation to keep cameras, phones, guests, and staff apart</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>QoS for VoIP and video calls</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>NetBox documentation: IP addressing, rack diagrams, inventory</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Monitoring and alerting from day one</span></li>
+    </ul>
   </div>
 </section>
 
-<section class="service-section-alt" id="managed">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Managed IT Services</span>
-        <h2>Proactive support — not reactive firefighting</h2>
-        <p>24/7 monitoring, proactive maintenance, and rapid response. We catch and resolve issues before they impact your operations, not after your users start calling.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">Zabbix</span><span class="service-tag">Prometheus</span><span class="service-tag">Grafana</span><span class="service-tag">Ansible</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>24/7 infrastructure monitoring with Zabbix and Prometheus</li>
-        <li>Automated alerting with on-call escalation for critical incidents</li>
-        <li>Regular patching, updates, and preventive maintenance</li>
-        <li>Endpoint management: workstations, servers, and mobile devices</li>
-        <li>Help desk support with clear SLAs</li>
-        <li>Capacity planning and performance trend analysis</li>
-        <li>Monthly reporting and strategic IT planning</li>
-        <li>Asset inventory and lifecycle management</li>
-      </ul>
+<section class="svc" id="managed">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg></div>
+      <h2>Managed IT</h2>
+      <p>Ongoing care for your systems. We watch them around the clock, keep them patched, and fix problems early, ideally before anyone in the office notices.</p>
+      <div class="chips"><span>Zabbix</span><span>Prometheus</span><span>Grafana</span><span>Ansible</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>24/7 monitoring of network, servers, and services</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Alerting with on-call escalation for anything critical</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Scheduled patching and preventive maintenance</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Workstation, server, and mobile device management</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Help desk with clear response times</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Capacity planning based on real usage trends</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A monthly report and a standing planning conversation</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Asset inventory and replacement planning</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="cloud">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Cloud Solutions</span>
-        <h2>Cloud infrastructure that's secure and cost-effective</h2>
-        <p>From migration planning to ongoing optimization — we manage your Azure and AWS environments so you get the benefits of cloud without the overhead of figuring it out yourself.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">Microsoft Azure</span><span class="service-tag">AWS</span><span class="service-tag">Microsoft 365</span><span class="service-tag">Azure Entra ID</span><span class="service-tag">Azure Arc</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>Cloud strategy, assessment, and migration planning</li>
-        <li>Azure and AWS infrastructure design, deployment, and management</li>
-        <li>Microsoft 365 setup, configuration, and ongoing administration</li>
-        <li>Hybrid integration: on-prem to cloud, seamlessly</li>
-        <li>Azure Arc enrollment for on-prem server management via Azure portal</li>
-        <li>Identity management: Azure Entra ID, SSO, and MFA rollouts</li>
-        <li>Cloud security posture management and compliance enforcement</li>
-        <li>Cost optimization: right-sizing, reserved instances, budget alerting</li>
-      </ul>
+<section class="svc" id="cloud">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5h10a4 4 0 0 0 .7-7.94A6 6 0 0 0 6.3 9.6 4.5 4.5 0 0 0 7 18.5z"/></svg></div>
+      <h2>Cloud &amp; Microsoft 365</h2>
+      <p>Moving to Azure or AWS, or cleaning up what&rsquo;s already there. We handle the setup and day-to-day administration, and we keep an eye on costs so the bill doesn&rsquo;t creep.</p>
+      <div class="chips"><span>Azure</span><span>AWS</span><span>Microsoft 365</span><span>Entra ID</span><span>Azure Arc</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Assessments and migration planning</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Azure and AWS design, deployment, and management</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Microsoft 365 setup and ongoing administration</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Hybrid setups that tie on-prem servers to the cloud</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Azure Arc so on-prem servers can be managed from the Azure portal</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Entra ID, single sign-on, and MFA rollouts</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Security baselines and policy enforcement</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Cost reviews: right-sizing, reservations, budget alerts</span></li>
+    </ul>
   </div>
 </section>
 
-<section class="service-section-alt" id="security">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Cybersecurity & Compliance</span>
-        <h2>Defense-in-depth for real-world threats</h2>
-        <p>Layered security combining technology, policy, and training. PCI DSS and HIPAA compliance built into the architecture from the start — not bolted on after an audit.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">Palo Alto</span><span class="service-tag">Sophos</span><span class="service-tag">PCI DSS</span><span class="service-tag">HIPAA</span><span class="service-tag">MFA</span><span class="service-tag">EDR</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>Next-gen firewall deployment: Palo Alto and Sophos platforms</li>
-        <li>PCI DSS and HIPAA compliance consulting, implementation, and audit prep</li>
-        <li>Security awareness training for staff at all levels</li>
-        <li>Enterprise password management and MFA deployment</li>
-        <li>Vulnerability assessments and remediation planning</li>
-        <li>Incident response planning and tabletop exercises</li>
-        <li>Security policy development and regulatory alignment</li>
-        <li>Endpoint detection and response (EDR) deployment and management</li>
-      </ul>
+<section class="svc" id="security">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 7.9-7 9.5-4.1-1.6-7-5.2-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h2>Security &amp; compliance</h2>
+      <p>Layered security that covers the firewall, the endpoints, the accounts, and the people using them. If you handle card payments or health records, we design with PCI DSS or HIPAA in mind from the start instead of patching things up before an audit.</p>
+      <div class="chips"><span>Palo Alto</span><span>Sophos</span><span>EDR</span><span>MFA</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Firewall deployment on Palo Alto and Sophos</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>PCI DSS and HIPAA consulting, implementation, and audit prep</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Security awareness training for staff</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Password manager and MFA rollouts</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Vulnerability scans and a plan to fix what they find</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Incident response plans and tabletop exercises</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Written security policies</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Endpoint detection and response (EDR)</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="automation">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Infrastructure Automation</span>
-        <h2>Consistent deployments, zero configuration drift</h2>
-        <p>Infrastructure as Code using Ansible and Python — every configuration change is version-controlled, repeatable, and reversible. No more "works on this one server" problems.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">Ansible</span><span class="service-tag">Python</span><span class="service-tag">Terraform</span><span class="service-tag">GitHub Actions</span><span class="service-tag">CI/CD</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>Ansible playbooks for configuration management and deployment</li>
-        <li>Infrastructure as Code with version control and change tracking</li>
-        <li>Python scripting for workflow automation and system integration</li>
-        <li>CI/CD pipeline setup for infrastructure changes</li>
-        <li>Automated testing and validation before deployment</li>
-        <li>Drift detection and automated remediation</li>
-      </ul>
+<section class="svc" id="automation">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5.5l-3 13"/></svg></div>
+      <h2>Automation</h2>
+      <p>Configuration written as code and kept in version control. Every change is tracked, can be reviewed before it goes out, and can be rolled back if it causes trouble.</p>
+      <div class="chips"><span>Ansible</span><span>Python</span><span>Terraform</span><span>GitHub Actions</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Ansible playbooks for configuration and deployment</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Infrastructure as code with full change history</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Python scripts for repetitive tasks and system integrations</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Pipelines that test and apply infrastructure changes</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Checks that run before a change is deployed</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Drift detection, so manual changes don&rsquo;t pile up unnoticed</span></li>
+    </ul>
   </div>
 </section>
 
-<section class="service-section-alt" id="monitoring">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Documentation & Monitoring</span>
-        <h2>Complete visibility — from day one</h2>
-        <p>You can't manage what you can't see. We implement monitoring and documentation from the start so your team always has a clear, current picture of the environment.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">NetBox</span><span class="service-tag">Zabbix</span><span class="service-tag">Prometheus</span><span class="service-tag">Grafana</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>NetBox setup: IP management, rack diagrams, device inventory</li>
-        <li>Real-time network monitoring with dashboards and alerting</li>
-        <li>Application performance monitoring end-to-end</li>
-        <li>Log aggregation and centralized log management</li>
-        <li>Capacity planning with historical trend analysis</li>
-        <li>Runbooks and standard operating procedures</li>
-      </ul>
+<section class="svc" id="monitoring">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M6 16v-4M10.5 16V7M15 16v-6M19.5 16V4"/></svg></div>
+      <h2>Documentation &amp; monitoring</h2>
+      <p>You should be able to see what&rsquo;s on your network and how it&rsquo;s doing without calling us. We set up both the documentation and the dashboards, and keep them current.</p>
+      <div class="chips"><span>NetBox</span><span>Zabbix</span><span>Prometheus</span><span>Grafana</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>NetBox: IP management, rack diagrams, device inventory</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Live network dashboards with alerting</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Application monitoring from end to end</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Centralized logging</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Capacity planning from historical data</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Runbooks and standard operating procedures</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="web">
-  <div class="container">
-    <div class="service-detail">
-      <div class="service-detail-header reveal">
-        <span class="eyebrow">Web Development & Hosting</span>
-        <h2>Modern websites built on infrastructure we actually know</h2>
-        <p>We design and build websites and web applications on Azure Static Web Apps — the same platform we use for clients like Bradley's Saving Grace. Fast, secure, globally distributed, and often free to host for nonprofits and small organizations.</p>
-        <div class="service-tag-row">
-          <span class="service-tag">Azure Static Web Apps</span><span class="service-tag">GitHub Actions</span><span class="service-tag">Azure Functions</span><span class="service-tag">Custom Domains</span><span class="service-tag">SSL / HTTPS</span>
-        </div>
-      </div>
-      <ul class="service-feature-list reveal reveal-delay-1">
-        <li>Custom website design and development — no templates, no page builders</li>
-        <li>Azure Static Web Apps with global CDN and automatic HTTPS</li>
-        <li>GitHub Actions CI/CD pipeline — every commit deploys automatically</li>
-        <li>Azure Functions backend for contact forms, APIs, and dynamic features</li>
-        <li>Custom domain setup with DNS configuration and SSL</li>
-        <li>Free hosting tier for nonprofits and small organizations on Azure</li>
-        <li>Dev and staging environments for testing before going live</li>
-        <li>Ongoing maintenance, content updates, and performance monitoring</li>
-      </ul>
+<section class="svc" id="web">
+  <div class="wrap">
+    <div>
+      <div class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 6.8h.01M9 6.8h.01"/></svg></div>
+      <h2>Websites &amp; hosting</h2>
+      <p>We build sites on Azure Static Web Apps, the same platform this site and Bradley&rsquo;s Saving Grace run on. They&rsquo;re fast, served over HTTPS, and often free to host for nonprofits and small organizations.</p>
+      <div class="chips"><span>Azure Static Web Apps</span><span>Azure Functions</span><span>GitHub Actions</span></div>
     </div>
+    <ul class="ticks">
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Custom design and build, no page builders</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Global CDN and automatic HTTPS</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Deploys automatically from every commit</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Azure Functions for contact forms and other dynamic pieces</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Domain, DNS, and certificate setup</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Free hosting tier for qualifying nonprofits</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>A staging copy for reviewing changes before they go live</span></li>
+      <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Ongoing updates and maintenance</span></li>
+    </ul>
   </div>
 </section>
 
-<div class="cta-band">
-  <div class="cta-band-glow"></div>
-  <div class="container">
-    <h2>Not sure where to start?</h2>
-    <p>Tell us about your environment and we'll put together a clear, honest assessment and action plan.</p>
-    <div class="btn-group" style="justify-content:center;">
-      <a href="index.html#contact" class="btn btn-primary btn-lg">Schedule a Free Consultation</a>
-      <a href="case-studies.html" class="btn btn-secondary btn-lg">See Our Work</a>
+<section class="band cta">
+  <div class="wrap">
+    <div>
+      <h2>Not sure which of these you need?</h2>
+      <p>That&rsquo;s normal. Tell us what&rsquo;s going on and we&rsquo;ll sort out where to start.</p>
+    </div>
+    <div class="actions">
+      <a href="index.html#contact" class="btn btn-primary">Get in touch <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a href="tel:+13303475329" class="btn btn-ghost"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> (330) 347-5329</a>
     </div>
   </div>
-</div>
+</section>
+</main>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
-        </a>
-        <p>Enterprise IT infrastructure and managed services for growing businesses in Northeast Ohio and beyond.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/ppt.jpg" alt="" width="42" height="42">Packet Point Technologies</div>
+        <p>Network, cloud, and IT support for businesses, nonprofits, and municipalities in Northeast Ohio.</p>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Services</h4>
-        <a href="#network">Network Infrastructure</a>
-        <a href="#managed">Managed IT</a>
-        <a href="#cloud">Cloud Solutions</a>
-        <a href="#security">Cybersecurity</a>
-        <a href="#automation">Automation</a>
-        <a href="#web">Web Development</a>
+        <ul>
+          <li><a href="services.html#network">Networking</a></li>
+          <li><a href="services.html#managed">Managed IT</a></li>
+          <li><a href="services.html#cloud">Cloud &amp; Microsoft 365</a></li>
+          <li><a href="services.html#security">Security</a></li>
+          <li><a href="services.html#web">Websites</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="case-studies.html">Our work</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="support@packetpointtechnologies.com">support@packetpointtechnologies.com</a>
-        <a href="tel:+13303475329">(330) 347-5329</a>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+13303475329">(330) 347-5329</a></li>
+          <li><a href="mailto:support@packetpointtechnologies.com">support@packetpointtechnologies.com</a></li>
+          <li>Rittman, Ohio</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Packet Point Technologies LLC. All rights reserved.</span>
-      <span>Powered by Caffeine</span>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Packet Point Technologies LLC</span>
+      <span>Powered by caffeine</span>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>

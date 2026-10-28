@@ -1,86 +1,36 @@
-// ── Theme ─────────────────────────────────────────────────────
+// Theme: follows the system setting unless the visitor picks one.
+// The saved choice is applied early by an inline script in <head>.
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
-const saved = localStorage.getItem('ppt-theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const theme = saved || (prefersDark ? 'dark' : 'light');
 
-// Dark is default — only apply light if explicitly set
-if (theme === 'light') root.setAttribute('data-theme', 'light');
-updateThemeIcon(theme);
+function currentTheme() {
+  const set = root.getAttribute('data-theme');
+  if (set) return set;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next = current === 'light' ? 'dark' : 'light';
-    if (next === 'dark') {
-      root.removeAttribute('data-theme');
-    } else {
-      root.setAttribute('data-theme', 'light');
-    }
-    localStorage.setItem('ppt-theme', next);
-    updateThemeIcon(next);
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('ppt-theme', next); } catch (_) {}
   });
 }
 
-function updateThemeIcon(t) {
-  if (!themeToggle) return;
-  themeToggle.textContent = t === 'light' ? '🌙' : '☀️';
-  themeToggle.setAttribute('aria-label', t === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+// Mobile menu
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('nav-links');
+if (menuBtn && navLinks) {
+  const setOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  };
+  menuBtn.addEventListener('click', () => setOpen(!navLinks.classList.contains('open')));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
 }
 
-// ── Loader ────────────────────────────────────────────────────
-window.addEventListener('load', () => {
-  const loader = document.querySelector('.loader');
-  if (loader) setTimeout(() => loader.classList.add('hidden'), 150);
-});
-
-// ── Nav scroll ────────────────────────────────────────────────
-const header = document.querySelector('header');
-if (header) {
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 16);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-}
-
-// ── Mobile menu ───────────────────────────────────────────────
-const menuBtn = document.getElementById('mobile-menu-btn');
-const mobileNav = document.getElementById('mobile-nav');
-if (menuBtn && mobileNav) {
-  menuBtn.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('open');
-    menuBtn.textContent = open ? '✕' : '☰';
-  });
-  mobileNav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      menuBtn.textContent = '☰';
-    });
-  });
-}
-
-// ── Active nav ────────────────────────────────────────────────
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(link => {
-  const href = link.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-    link.classList.add('active');
-  }
-});
-
-// ── Scroll reveal ─────────────────────────────────────────────
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// ── Contact form (Web3Forms + hCaptcha) ───────────────────────
+// Contact form (Web3Forms + hCaptcha)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   const CONTACT_EMAIL = 'support@packetpointtechnologies.com';
@@ -116,7 +66,7 @@ if (contactForm) {
     const name = value('name');
     const company = value('company');
     data.subject = `Consultation request: ${name}${company ? ' (' + company + ')' : ''}`;
-    data.service = value('service') || 'Not specified';
+    data.service = value('service') || 'Not sure yet';
 
     submitBtn.disabled = true;
     setStatus('Sending…');
@@ -129,7 +79,7 @@ if (contactForm) {
       const json = await res.json().catch(() => ({}));
       if (!res.ok || !json.success) throw new Error(json.message || `HTTP ${res.status}`);
       contactForm.reset();
-      setStatus("Thanks! Your message has been sent. We'll be in touch shortly.", 'success');
+      setStatus("Thanks, your message was sent. We'll be in touch soon.", 'success');
     } catch (err) {
       console.error('Contact form error:', err);
       setStatus(`Sorry, something went wrong. Please email us directly at ${CONTACT_EMAIL}.`, 'error');

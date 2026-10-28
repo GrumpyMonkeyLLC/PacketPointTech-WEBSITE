@@ -3,203 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Studies — Packet Point Technologies</title>
-  <meta name="description" content="Real infrastructure projects. See how Packet Point Technologies has helped municipalities and nonprofits modernize their IT environments.">
+  <title>Our Work | Packet Point Technologies</title>
+  <meta name="description" content="Project write-ups: the City of Wadsworth Arista switch migration and the Bradley's Saving Grace website on Azure.">
   <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
-  <link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('ppt-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="loader"><div class="loader-ring"></div></div>
-
-<header>
-  <nav>
-    <a href="index.html" class="logo">
-      <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="case-studies.html">Case Studies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">☀️</button>
-      <a href="index.html#contact" class="nav-cta">Get a Free Consultation</a>
-      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-    </div>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/ppt.jpg" alt="" width="42" height="42"><span>Packet Point Technologies</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html" aria-current="page">Our work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+13303475329" aria-label="Call (330) 347-5329"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(330) 347-5329</span></a>
+    <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
 </header>
 
-<nav class="mobile-nav" id="mobile-nav">
-  <a href="services.html">Services</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="about.html">About</a>
-  <a href="index.html#contact">Contact</a>
-</nav>
-
-<section class="page-hero">
-  <div class="hero-bg-grid"></div>
-  <div class="container">
-    <span class="eyebrow">Case Studies</span>
-    <h1>Real projects, real results</h1>
-    <p>Infrastructure work we're proud of. Every engagement built on honest assessments, thorough documentation, and doing things right the first time.</p>
+<main id="main">
+<section class="band page-head">
+  <div class="wrap">
+    <span class="label">Our work</span>
+    <h1>Projects we can talk about</h1>
+    <p class="lead">A couple of jobs we can share publicly. Happy to go into more detail on either one if you get in touch.</p>
   </div>
 </section>
 
-<section>
-  <div class="container">
-
-    <div class="case-study-card reveal">
-      <div class="case-study-image">
-        <div class="ph-icon">🏛️</div>
-        <div class="ph-label">Municipal network infrastructure</div>
-        <span class="case-study-image-badge">Network Migration</span>
-      </div>
-      <div class="case-study-body">
-        <div class="case-study-meta">
-          <span class="case-study-type">Multi-Site Municipality · Wadsworth, Ohio</span>
-        </div>
-        <h3>City of Wadsworth: Brocade ICX to Arista Campus Switch Migration</h3>
-        <p>The City of Wadsworth needed to replace an aging Brocade ICX access layer that had grown difficult to manage, support, and secure. The project involved a full access layer overhaul across multiple municipal sites — migrating to a modern Arista campus switching platform at scale, with complete documentation and zero unplanned downtime to city services throughout the transition.</p>
-        <div class="case-metrics">
-          <div class="case-metric">
-            <div class="case-metric-value">99.999%</div>
-            <div class="case-metric-label">Network uptime</div>
-          </div>
-          <div class="case-metric">
-            <div class="case-metric-value">30+</div>
-            <div class="case-metric-label">Switches configured</div>
-          </div>
-          <div class="case-metric">
-            <div class="case-metric-value">0</div>
-            <div class="case-metric-label">Unplanned outages</div>
-          </div>
-        </div>
-        <div>
-          <h4 style="font-size:0.7rem;font-weight:800;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Technologies Used</h4>
-          <div class="tech-tags">
-            <span class="tech-tag">Arista EOS</span>
-            <span class="tech-tag">Campus Switching</span>
-            <span class="tech-tag">VLAN Migration</span>
-            <span class="tech-tag">STP</span>
-            <span class="tech-tag">NetBox</span>
-            <span class="tech-tag">Ansible</span>
-            <span class="tech-tag">Change Management</span>
-          </div>
-        </div>
-      </div>
+<article class="case" id="wadsworth">
+  <div class="wrap">
+    <dl class="facts">
+      <div><dt>Client</dt><dd>City of Wadsworth</dd></div>
+      <div><dt>Location</dt><dd>Wadsworth, Ohio</dd></div>
+      <div><dt>Type</dt><dd>Network migration, multiple sites</dd></div>
+      <div><dt>Stack</dt><dd>Arista EOS, NetBox, Ansible</dd></div>
+    </dl>
+    <div class="case-body">
+      <h2>Moving the City of Wadsworth from Brocade to Arista</h2>
+      <p>The city&rsquo;s Brocade ICX access switches had reached the point where they were hard to manage, hard to get support for, and hard to keep secure. The job was to replace the whole access layer across multiple municipal sites with Arista campus switching while city services kept running.</p>
+      <p>We moved VLANs and spanning tree over in planned change windows, used Ansible to keep switch configs consistent, and recorded every device, port, and address in NetBox as we went. When the work was done, the city&rsquo;s IT staff had current documentation for the whole access layer.</p>
+      <dl class="results">
+        <div><dt>switches configured</dt><dd>30+</dd></div>
+        <div><dt>network uptime</dt><dd>99.999%</dd></div>
+        <div><dt>unplanned outages</dt><dd>0</dd></div>
+      </dl>
     </div>
-
-    <div class="case-study-card reveal reveal-delay-1">
-      <div class="case-study-image">
-        <div class="ph-icon">💙</div>
-        <div class="ph-label">Nonprofit web presence on Azure</div>
-        <span class="case-study-image-badge">Web Development</span>
-      </div>
-      <div class="case-study-body">
-        <div class="case-study-meta">
-          <span class="case-study-type">Nonprofit Organization · Pro Bono</span>
-        </div>
-        <h3>Bradley's Saving Grace: Full-Stack Azure Web Presence</h3>
-        <p>Bradley's Saving Grace needed a professional web presence to support their mission and drive donor engagement — without the overhead of paid hosting eating into their operating budget. We designed and built a full-stack website on Azure Static Web Apps with an Azure Functions v4 backend, Table Storage for data persistence, Blob Storage for media, and a complete GitHub Actions CI/CD pipeline. The result is a fast, modern, fully managed site that costs the organization nothing to host, with automatic deployments from every code push.</p>
-        <p style="margin-bottom:1.75rem;"><a href="https://bradleyshugs.org" target="_blank" rel="noopener" style="color:var(--blue-light);font-weight:600;font-size:0.9rem;">Visit bradleyshugs.org →</a></p>
-        <div class="case-metrics">
-          <div class="case-metric">
-            <div class="case-metric-value">$0</div>
-            <div class="case-metric-label">Monthly hosting cost</div>
-          </div>
-          <div class="case-metric">
-            <div class="case-metric-value">100%</div>
-            <div class="case-metric-label">Azure-native stack</div>
-          </div>
-          <div class="case-metric">
-            <div class="case-metric-value">Auto</div>
-            <div class="case-metric-label">CI/CD deployments</div>
-          </div>
-        </div>
-        <div>
-          <h4 style="font-size:0.7rem;font-weight:800;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Technologies Used</h4>
-          <div class="tech-tags">
-            <span class="tech-tag">Azure Static Web Apps</span>
-            <span class="tech-tag">Azure Table Storage</span>
-            <span class="tech-tag">Azure Blob Storage</span>
-            <span class="tech-tag">GitHub Actions</span>
-            <span class="tech-tag">Custom Domain</span>
-            <span class="tech-tag">SSL / HTTPS</span>
-          </div>
-        </div>
-      </div>
     </div>
+</article>
 
-    <div class="case-study-card reveal reveal-delay-2" style="opacity:0.55;">
-      <div class="case-study-image" style="height:120px;">
-        <div class="ph-icon" style="font-size:1.5rem;">⏳</div>
-        <div class="ph-label">More case studies in progress</div>
-      </div>
-      <div class="case-study-body">
-        <div class="case-study-meta">
-          <span class="case-study-type">Coming Soon</span>
-        </div>
-        <h3 style="color:var(--text-muted);">More engagements on the way</h3>
-        <p>We're documenting additional projects across cloud migrations, cybersecurity implementations, and managed services deployments. Check back soon.</p>
-      </div>
+<article class="case" id="bradleys">
+  <div class="wrap">
+    <dl class="facts">
+      <div><dt>Client</dt><dd>Bradley&rsquo;s Saving Grace</dd></div>
+      <div><dt>Type</dt><dd>Nonprofit website, pro bono</dd></div>
+      <div><dt>Live site</dt><dd><a href="https://bradleyshugs.org" target="_blank" rel="noopener">bradleyshugs.org</a></dd></div>
+      <div><dt>Stack</dt><dd>Azure Static Web Apps, Functions v4, Table &amp; Blob Storage, GitHub Actions</dd></div>
+    </dl>
+    <div class="case-body">
+      <h2>A website for Bradley&rsquo;s Saving Grace that costs nothing to run</h2>
+      <p>Bradley&rsquo;s Saving Grace needed a proper website to support its mission and bring in donors, but paying for hosting would have come straight out of its operating budget.</p>
+      <p>We designed and built the site on Azure Static Web Apps, with an Azure Functions backend, Table Storage for data, and Blob Storage for photos and media. A GitHub Actions pipeline publishes every change automatically, so updates go live without anyone logging into a server.</p>
+      <dl class="results">
+        <div><dt>monthly hosting cost</dt><dd>$0</dd></div>
+        <div><dt>servers to maintain</dt><dd>0</dd></div>
+      </dl>
     </div>
+    </div>
+</article>
 
+<section class="band cta">
+  <div class="wrap">
+    <div>
+      <h2>Have a project like these?</h2>
+      <p>More write-ups are on the way. In the meantime, we&rsquo;re happy to talk through what you&rsquo;re dealing with.</p>
+    </div>
+    <div class="actions">
+      <a href="index.html#contact" class="btn btn-primary">Get in touch <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    </div>
   </div>
 </section>
+</main>
 
-<div class="cta-band">
-  <div class="cta-band-glow"></div>
-  <div class="container">
-    <h2>Want results like these?</h2>
-    <p>Tell us about your environment. We'll put together a free assessment and action plan.</p>
-    <div class="btn-group" style="justify-content:center;">
-      <a href="index.html#contact" class="btn btn-primary btn-lg">Schedule a Free Consultation</a>
-      <a href="services.html" class="btn btn-secondary btn-lg">View Our Services</a>
-    </div>
-  </div>
-</div>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
-        </a>
-        <p>Enterprise IT infrastructure and managed services for growing businesses in Northeast Ohio and beyond.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/ppt.jpg" alt="" width="42" height="42">Packet Point Technologies</div>
+        <p>Network, cloud, and IT support for businesses, nonprofits, and municipalities in Northeast Ohio.</p>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Services</h4>
-        <a href="services.html#network">Network Infrastructure</a>
-        <a href="services.html#managed">Managed IT</a>
-        <a href="services.html#cloud">Cloud Solutions</a>
-        <a href="services.html#security">Cybersecurity</a>
-        <a href="services.html#automation">Automation</a>
-        <a href="services.html#web">Web Development</a>
+        <ul>
+          <li><a href="services.html#network">Networking</a></li>
+          <li><a href="services.html#managed">Managed IT</a></li>
+          <li><a href="services.html#cloud">Cloud &amp; Microsoft 365</a></li>
+          <li><a href="services.html#security">Security</a></li>
+          <li><a href="services.html#web">Websites</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="case-studies.html">Our work</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:support@packetpointtechnologies.com">support@packetpointtechnologies.com</a>
-        <a href="tel:+13303475329">(330) 347-5329</a>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+13303475329">(330) 347-5329</a></li>
+          <li><a href="mailto:support@packetpointtechnologies.com">support@packetpointtechnologies.com</a></li>
+          <li>Rittman, Ohio</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Packet Point Technologies LLC. All rights reserved.</span>
-      <span>Powered by Caffeine</span>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Packet Point Technologies LLC</span>
+      <span>Powered by caffeine</span>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
