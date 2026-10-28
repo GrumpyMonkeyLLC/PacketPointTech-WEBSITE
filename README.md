@@ -1,6 +1,6 @@
 # Packet Point Technologies Website
 
-Professional dark-themed website for Packet Point Technologies LLC.
+Static website for Packet Point Technologies LLC. Plain HTML, one stylesheet, a little JavaScript. No build step.
 
 ## Setup
 
@@ -37,22 +37,17 @@ packet-point-website/
 │   └── styles.css      # All styling
 ├── js/
 │   └── main.js         # JavaScript functionality
-├── fonts/              # Self-hosted Plus Jakarta Sans (SIL OFL 1.1)
+├── fonts/              # Self-hosted IBM Plex Sans + Plex Mono (SIL OFL 1.1)
 ├── images/
 │   └── logos/          # Company logos (SVG format)
 └── README.md           # This file
 ```
 
-## Features
+## Notes
 
-- Fully responsive design
-- Dark theme
-- Smooth scrolling
-- Mobile menu
-- Hover effects on technology logos
-- Contact information with phone and email
-- Services showcase
-- Technology/platform showcase
+- Light theme by default; follows the visitor's system dark mode, with a toggle in the header
+- Header and footer are repeated in each HTML file. If you change one, change them all
+- Contact form posts to Web3Forms with hCaptcha (see `js/main.js`)
 
 ## Deployment
 

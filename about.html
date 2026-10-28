@@ -3,212 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Packet Point Technologies</title>
-  <meta name="description" content="Learn about Packet Point Technologies — our story, values, and commitment to enterprise IT infrastructure excellence in Northeast Ohio.">
+  <title>About | Packet Point Technologies</title>
+  <meta name="description" content="Packet Point Technologies is a small IT and network engineering company in Rittman, Ohio, serving Northeast Ohio.">
   <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
-  <link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('ppt-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="loader"><div class="loader-ring"></div></div>
-
-<header>
-  <nav>
-    <a href="index.html" class="logo">
-      <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="case-studies.html">Case Studies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">☀️</button>
-      <a href="index.html#contact" class="nav-cta">Get a Free Consultation</a>
-      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-    </div>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/ppt.jpg" alt="" width="40" height="40"><span>Packet Point Technologies</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Our work</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+13303475329">(330) 347-5329</a>
+    <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
 </header>
 
-<nav class="mobile-nav" id="mobile-nav">
-  <a href="services.html">Services</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="about.html">About</a>
-  <a href="index.html#contact">Contact</a>
-</nav>
-
-<section class="page-hero">
-  <div class="hero-bg-grid"></div>
-  <div class="container">
-    <span class="eyebrow">About Us</span>
-    <h1>Built on doing things right</h1>
-    <p>We started Packet Point Technologies because businesses deserve IT partners who are technically honest, document everything, and stick around after the project closes.</p>
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <h1>About</h1>
+    <p class="lead">Packet Point Technologies is a small IT and network engineering company in Rittman, Ohio. We work with municipalities, nonprofits, and growing businesses around Northeast Ohio.</p>
   </div>
 </section>
 
-<!-- Story -->
-<section>
-  <div class="container">
-    <div class="about-story">
-      <div class="story-text reveal">
-        <span class="eyebrow">Our Story</span>
-        <h2 style="margin-bottom:1.25rem;">Founded on transparency and technical honesty</h2>
-        <p>Packet Point Technologies was built on a straightforward premise: businesses deserve IT infrastructure that works reliably, scales without drama, and is backed by genuine technical expertise — not sales pitches or vendor lock-in.</p>
-        <p>We bring hands-on enterprise experience across BGP-routed campus networks, hybrid Azure deployments, compliance-driven environments, and large-scale switching projects — and we apply that same depth of knowledge to every client engagement, regardless of size or budget.</p>
-        <p>Our approach has always been documentation-first. Every project ships with complete infrastructure documentation, knowledge transfer to your team, and monitoring configured before we walk out the door. You should understand your own environment — that's non-negotiable for us.</p>
-        <p>Based in Northeast Ohio, we work with municipalities, nonprofits, and growing businesses that need infrastructure and a web presence they can count on.</p>
-      </div>
-      <div class="about-stats-panel reveal reveal-delay-1">
-        <div class="about-stat-item">
-          <div class="about-stat-value">100<span>+</span></div>
-          <div class="about-stat-label">Switches deployed in production environments</div>
-        </div>
-        <div class="about-stat-item">
-          <div class="about-stat-value">99.99<span>%</span></div>
-          <div class="about-stat-label">Network uptime on the Wadsworth migration</div>
-        </div>
-        <div class="about-stat-value" style="display:none;"></div>
-        <div class="about-stat-item">
-          <div class="about-stat-value">$0</div>
-          <div class="about-stat-label">Azure hosting cost for Bradley's Saving Grace nonprofit</div>
-        </div>
-        <div class="about-stat-item">
-          <div class="about-stat-value">24<span>/7</span></div>
-          <div class="about-stat-label">Monitoring and on-call response</div>
-        </div>
-      </div>
+<section class="section">
+  <div class="wrap split text-first">
+    <div class="prose">
+      <h2>Why we started</h2>
+      <p>We started Packet Point because too many organizations end up with IT they don&rsquo;t understand: a network installed by a vendor who has since moved on, no diagrams, and nobody who can say for sure what a given switch does. We wanted to be the kind of IT company we&rsquo;d hire ourselves.</p>
+      <p>Our background is enterprise work: BGP-routed campus networks, hybrid Azure environments, compliance-heavy setups, and large switching projects. We bring the same care to a ten-person office that we would to a city network.</p>
+      <p>Every project ends with documentation and a handoff. You should understand your own environment, and you shouldn&rsquo;t be stuck with us if you&rsquo;d rather not be.</p>
     </div>
+    <dl class="facts">
+      <div><dt>Based in</dt><dd>Rittman, Ohio</dd></div>
+      <div><dt>Service area</dt><dd>Northeast Ohio, with remote work further out</dd></div>
+      <div><dt>Clients</dt><dd>Municipalities, nonprofits, small and mid-sized businesses</dd></div>
+      <div><dt>Contracts</dt><dd>Project work or month-to-month support</dd></div>
+      <div><dt>Contact</dt><dd><a href="tel:+13303475329">(330) 347-5329</a></dd></div>
+    </dl>
   </div>
 </section>
 
-<!-- Values -->
-<section style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <span class="eyebrow">Our Values</span>
-      <h2>What guides every engagement</h2>
-      <p>The principles behind every recommendation, every architecture decision, and every line of documentation we write.</p>
-    </div>
-    <div class="values-grid reveal reveal-delay-1">
-      <div class="value-card">
-        <div class="value-num">01</div>
-        <h3>Technical honesty</h3>
-        <p>We tell you what you need to hear, not what's easiest to sell. If a simpler solution solves the problem, that's what we recommend — even if it means less work for us.</p>
+<section class="section">
+  <div class="wrap">
+    <h2 style="margin-bottom:2.5rem">What we care about</h2>
+    <div class="values">
+      <div>
+        <h3>Straight answers</h3>
+        <p>We tell you what you need to hear, not what&rsquo;s easiest to sell. If a simpler fix solves the problem, that&rsquo;s the one we recommend, even when it means less work for us.</p>
       </div>
-      <div class="value-card">
-        <div class="value-num">02</div>
-        <h3>Documentation as a deliverable</h3>
-        <p>Every project ships with complete documentation. Network diagrams, runbooks, IP addressing, device configs — all of it, always. Your team should be able to work without us.</p>
+      <div>
+        <h3>Documentation you actually get</h3>
+        <p>Network diagrams, runbooks, IP addressing, device configs. All of it, on every project. Your team should be able to work without us.</p>
       </div>
-      <div class="value-card">
-        <div class="value-num">03</div>
-        <h3>Reliability by design</h3>
-        <p>Redundancy, monitoring, and failover aren't afterthoughts. They're architectural requirements we build in from the start, not features we sell you later.</p>
+      <div>
+        <h3>Reliability built in</h3>
+        <p>Redundancy, monitoring, and failover are part of the design from the start, not upgrades we try to sell you later.</p>
       </div>
-      <div class="value-card">
-        <div class="value-num">04</div>
-        <h3>Long-term thinking</h3>
-        <p>We design for where your business is going in three years, not just where it is today. Scalability and maintainability are first-class requirements on every project.</p>
+      <div>
+        <h3>Thinking a few years out</h3>
+        <p>We plan for where you&rsquo;ll be in three years, not just next month, so the network doesn&rsquo;t need to be ripped out the moment you grow.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Expertise -->
-<section>
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow">Expertise</span>
-      <h2>What we know in production</h2>
-      <p>Not a generalist shop. Deep expertise across the technologies your infrastructure actually runs on — configured in real environments, not just studied for a certification.</p>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>What we work with</h2>
+        <p>The platforms we use day to day, in production, not only in a lab.</p>
+      </div>
     </div>
-    <div class="service-grid reveal reveal-delay-1">
-      <div class="service-card">
-        <div class="service-card-icon">🌐</div>
-        <h3>Enterprise Networking</h3>
-        <p>Cisco, Arista, Ruckus. BGP, OSPF, STP. Campus switching at scale, WAN design, wireless. Deployed in production — not just in a lab.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-card-icon">☁️</div>
-        <h3>Cloud & Hybrid</h3>
-        <p>Azure and AWS architecture, Microsoft 365, Azure Arc, hybrid AD/Entra environments, cost management, and cloud security posture.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-card-icon">🔒</div>
-        <h3>Security & Compliance</h3>
-        <p>Palo Alto and Sophos firewalls, PCI DSS and HIPAA compliance programs, identity management, vulnerability management, and incident response.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-card-icon">⚙️</div>
-        <h3>Automation & IaC</h3>
-        <p>Ansible, Python, Terraform, and GitHub Actions. Version-controlled infrastructure, repeatable deployments, CI/CD pipelines for config changes.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-card-icon">📊</div>
-        <h3>Monitoring & Observability</h3>
-        <p>Zabbix, Prometheus, and Grafana. Full-stack visibility from network layer to application layer, with alerting that makes operational sense.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-card-icon">🖥️</div>
-        <h3>Web Development & Hosting</h3>
-        <p>Azure Static Web Apps, Azure Functions, GitHub Actions CI/CD. Custom sites built for performance with zero-cost hosting for qualifying nonprofits.</p>
-      </div>
+    <div class="rows">
+      <div class="row"><h3>Networking</h3><p>Campus switching, WAN design, wireless, and routing with OSPF, BGP, and STP.</p><span class="mono">Cisco, Arista, Ruckus</span></div>
+      <div class="row"><h3>Cloud &amp; hybrid</h3><p>Azure and AWS, Microsoft 365, hybrid AD and Entra ID, cost management, and security posture.</p><span class="mono">Azure, AWS, M365, Arc</span></div>
+      <div class="row"><h3>Security &amp; compliance</h3><p>Firewalls, PCI DSS and HIPAA programs, identity, vulnerability management, and incident response.</p><span class="mono">Palo Alto, Sophos</span></div>
+      <div class="row"><h3>Automation</h3><p>Version-controlled configuration, repeatable deployments, and pipelines for config changes.</p><span class="mono">Ansible, Python, Terraform</span></div>
+      <div class="row"><h3>Monitoring</h3><p>Visibility from the network up to the application, with alerts that are worth waking up for.</p><span class="mono">Zabbix, Prometheus, Grafana</span></div>
+      <div class="row"><h3>Web</h3><p>Static sites and small backends on Azure with automatic deploys.</p><span class="mono">Azure SWA, Functions</span></div>
     </div>
   </div>
 </section>
 
-<div class="cta-band">
-  <div class="cta-band-glow"></div>
-  <div class="container">
-    <h2>Ready to work together?</h2>
-    <p>Let's talk about your infrastructure and put together a plan that fits your business and your budget.</p>
-    <div class="btn-group" style="justify-content:center;">
-      <a href="index.html#contact" class="btn btn-primary btn-lg">Get in Touch</a>
-      <a href="services.html" class="btn btn-secondary btn-lg">View Services</a>
+<div class="wrap page-end">
+  <div class="note">
+    <div>
+      <h2>Want to talk?</h2>
+      <p>Tell us about your setup and we&rsquo;ll put together a plan that fits your business and budget.</p>
+    </div>
+    <div class="actions">
+      <a href="index.html#contact" class="btn btn-primary">Get in touch</a>
+      <span class="aside">or call <a href="tel:+13303475329">(330) 347-5329</a></span>
     </div>
   </div>
 </div>
+</main>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="images/ppt.jpg" alt="Packet Point Technologies" class="logo-img"><span class="logo-text">Packet Point Technologies</span>
-        </a>
-        <p>Enterprise IT infrastructure and managed services for growing businesses in Northeast Ohio and beyond.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/ppt.jpg" alt="" width="40" height="40">Packet Point Technologies</div>
+        <p>Network, cloud, and IT support for businesses, nonprofits, and municipalities in Northeast Ohio.</p>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Services</h4>
-        <a href="services.html#network">Network Infrastructure</a>
-        <a href="services.html#managed">Managed IT</a>
-        <a href="services.html#cloud">Cloud Solutions</a>
-        <a href="services.html#security">Cybersecurity</a>
-        <a href="services.html#automation">Automation</a>
-        <a href="services.html#web">Web Development</a>
+        <ul>
+          <li><a href="services.html#network">Networking</a></li>
+          <li><a href="services.html#managed">Managed IT</a></li>
+          <li><a href="services.html#cloud">Cloud &amp; Microsoft 365</a></li>
+          <li><a href="services.html#security">Security</a></li>
+          <li><a href="services.html#web">Websites</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
+      <div>
         <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="case-studies.html">Our work</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:support@packetpointtechnologies.com">support@packetpointtechnologies.com</a>
-        <a href="tel:+13303475329">(330) 347-5329</a>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+13303475329">(330) 347-5329</a></li>
+          <li><a href="mailto:support@packetpointtechnologies.com">support@packetpointtechnologies.com</a></li>
+          <li>Rittman, Ohio</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Packet Point Technologies LLC. All rights reserved.</span>
-      <span>Powered by Caffeine</span>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Packet Point Technologies LLC</span>
+      <span>Powered by caffeine</span>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
