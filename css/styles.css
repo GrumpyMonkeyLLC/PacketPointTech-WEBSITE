@@ -503,3 +503,15 @@ a.post:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: in
   .post-grid, .counties { grid-template-columns: 1fr; }
   .community { padding: 4rem 0; }
 }
+
+/* Community card (replaces photo) */
+.community-card { background: var(--surface); color: var(--ink); border-radius: 12px; padding: 1.75rem; box-shadow: 0 24px 60px rgba(0,0,0,0.35); }
+.community .community-card h3 { color: var(--ink); margin: 1.5rem 0 0.75rem; }
+.cc-proof { display: flex; align-items: center; gap: 1.1rem; background: var(--band-grad); border-radius: 10px; padding: 1.1rem 1.3rem; text-decoration: none; transition: transform .18s; }
+.cc-proof:hover { transform: translateY(-2px); }
+.cc-proof b { font-size: 2.6rem; font-weight: 800; font-stretch: 112%; color: var(--cyan); line-height: 1; }
+.community .cc-proof span { color: var(--band-muted); font-size: 0.95rem; line-height: 1.45; }
+.cc-proof strong { display: block; color: #fff; font-size: 1.02rem; }
+.community-card ul { display: grid; gap: 0.7rem; }
+.community-card li { display: grid; grid-template-columns: 22px 1fr; gap: 0.6rem; color: var(--ink-2); }
+.community-card li svg.i { width: 20px; height: 20px; color: var(--accent); stroke-width: 2.25; margin-top: 0.1rem; }
