@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Hijacking: How Attackers Get Past MFA | Packet Point Technologies</title>
+  <meta name="description" content="How session token hijacking lets attackers into Microsoft 365 accounts even with MFA turned on, the warning signs, and what actually stops it.">
+  <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('ppt-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/ppt.jpg" alt="" width="42" height="42"><span>Packet Point Technologies</span></a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Our work</a>
+      <a href="resources.html" aria-current="page">Resources</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+13307901553" aria-label="Call (330) 790-1553"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(330) 790-1553</span></a>
+    <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+  <article class="article">
+    <a class="back-link" href="resources.html">&larr; All posts</a>
+    <span class="post-tag alert"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg> Threat alert</span>
+    <h1 style="margin-top:1rem">Token hijacking: how attackers get into accounts that have MFA</h1>
+    <p class="meta">November 2026 &middot; 5 minute read</p>
+
+    <p>Multi-factor authentication (MFA) is still one of the best things you can turn on. But attackers have found a way around the most common kinds of it, and it&rsquo;s showing up in small business Microsoft 365 accounts. It&rsquo;s called <strong>token hijacking</strong>, and it works even when the person did everything &ldquo;right&rdquo; and approved their own MFA prompt.</p>
+
+    <h2>First, what&rsquo;s a token?</h2>
+    <p>When you sign in to Microsoft 365, Google, or most other online services, you enter your password and approve MFA once. After that, your browser is handed a <strong>session token</strong>, a small digital pass that says &ldquo;this person already signed in.&rdquo; That&rsquo;s why you don&rsquo;t have to approve MFA every time you open Outlook.</p>
+    <p>Whoever holds that token is treated as you. If an attacker steals it, they don&rsquo;t need your password or your phone.</p>
+
+    <h2>How attackers steal it</h2>
+    <p><strong>1. Fake login pages that sit in the middle.</strong> You get an email: a shared document, a voicemail, an invoice. The link opens a page that looks exactly like the Microsoft sign-in page. Behind the scenes, it passes everything you type to the real Microsoft site. You enter your password, approve the MFA prompt on your phone, and land in what looks like your normal inbox. Meanwhile, the fake page has copied the session token that Microsoft just issued.</p>
+    <p><strong>2. Password-stealing malware.</strong> Some malware, often hidden in fake software downloads or cracked programs, copies the saved sessions straight out of your web browser and sends them to the attacker.</p>
+    <p>Either way, the attacker loads that token into their own browser and is inside your email without ever being asked for MFA.</p>
+
+    <h2>What they do once they&rsquo;re in</h2>
+    <ul>
+      <li>Read your email to learn who you pay and who pays you.</li>
+      <li>Create inbox rules that hide or forward messages, so you don&rsquo;t see replies.</li>
+      <li>Send fake invoices or changed bank details to your customers and vendors from your real account. (See our post on <a href="fake-invoice-emails.html">fake invoice emails</a>.)</li>
+      <li>Add their own MFA method or app so they can come back later.</li>
+    </ul>
+
+    <h2>Warning signs</h2>
+    <ul>
+      <li>You signed in through a link in an email, and the page then sent you somewhere unexpected or showed an error.</li>
+      <li>Coworkers or customers reply to emails you never sent.</li>
+      <li>Emails go missing, or you find inbox rules you didn&rsquo;t create.</li>
+      <li>Sign-ins from locations or devices you don&rsquo;t recognize in your account&rsquo;s activity.</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>The most important thing to know:</strong> changing the password is not enough. A stolen token can keep working after a password reset until the session is revoked. If you think an account was hit, sign out of all sessions too (in Microsoft 365, an admin can revoke them), not just change the password.</p>
+    </div>
+
+    <h2>What actually stops it</h2>
+    <p>Regular MFA still helps a lot, so keep it on. These close the gap it leaves:</p>
+    <ul>
+      <li><strong>Phishing-resistant sign-in.</strong> Passkeys, security keys, and Windows Hello for Business are tied to the real website, so a fake login page can&rsquo;t relay them. This is the single biggest fix.</li>
+      <li><strong>Conditional Access in Microsoft 365.</strong> Rules that only let company data be reached from your own managed devices, or from expected locations, make a stolen token far less useful. (This needs a Microsoft Entra ID P1 license, included in Microsoft 365 Business Premium.)</li>
+      <li><strong>Token protection and risky sign-in detection.</strong> On supported devices and apps, Microsoft can tie a token to the device it was issued to, and flag sign-ins that look like a stolen session. Some of these features need higher license tiers, so it&rsquo;s worth checking what you already pay for.</li>
+      <li><strong>Endpoint protection that watches behavior</strong> (EDR) to catch the malware that steals browser sessions. See <a href="antivirus-vs-edr.html">antivirus vs. EDR</a>.</li>
+      <li><strong>One habit for everyone:</strong> don&rsquo;t sign in from a link in an email. Go to the site yourself, such as office.com, and open the document from there.</li>
+    </ul>
+
+    <h2>If you think it happened to you</h2>
+    <ol>
+      <li>Revoke all sessions for the account and reset the password.</li>
+      <li>Check the account&rsquo;s MFA methods and remove any you don&rsquo;t recognize.</li>
+      <li>Look for new inbox rules and forwarding, and delete anything you didn&rsquo;t set up.</li>
+      <li>Warn your contacts not to act on recent payment requests from you without calling first.</li>
+    </ol>
+    <p>Not sure whether your Microsoft 365 setup would stop this? <a href="index.html#contact">Book a free IT checkup call</a> and we&rsquo;ll look at your sign-in settings with you.</p>
+  </article>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="images/ppt.jpg" alt="" width="42" height="42">Packet Point Technologies</div>
+        <p>Network, cloud, and IT support for businesses, nonprofits, and municipalities in Northeast Ohio.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#network">Networking</a></li>
+          <li><a href="services.html#managed">Managed IT</a></li>
+          <li><a href="services.html#cloud">Cloud &amp; Microsoft 365</a></li>
+          <li><a href="services.html#security">Security</a></li>
+          <li><a href="services.html#web">Websites</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="case-studies.html">Our work</a></li>
+          <li><a href="resources.html">Scam alerts &amp; tips</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+13307901553">(330) 790-1553</a></li>
+          <li><a href="mailto:support@packetpointtechnologies.com">support@<wbr>packetpointtechnologies.com</a></li>
+          <li>Rittman, Ohio</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Packet Point Technologies LLC</span>
+      <span>Powered by caffeine</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
