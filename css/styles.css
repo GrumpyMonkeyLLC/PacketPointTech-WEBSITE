@@ -462,7 +462,7 @@ a.tools.link-arrow:hover { text-decoration: underline; }
 .community-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; }
 
 /* Posts */
-.post-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
 .post { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 1.6rem 1.75rem; text-decoration: none; color: inherit; transition: transform .18s, box-shadow .18s; }
 a.post:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: inherit; }
 .post h3 { margin: 0.75rem 0 0.5rem; }
