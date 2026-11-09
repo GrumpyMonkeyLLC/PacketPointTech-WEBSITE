@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work | Packet Point Technologies</title>
+  <title>Success Stories | Packet Point Technologies</title>
   <meta name="description" content="Project write-ups: the City of Wadsworth Arista switch migration and the Bradley's Saving Grace website on Azure.">
   <link rel="icon" type="image/jpeg" href="images/ppt.jpg">
   <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,6 +19,7 @@
     <nav class="nav-links" id="nav-links" aria-label="Main">
       <a href="services.html">Services</a>
       <a href="case-studies.html" aria-current="page">Our work</a>
+      <a href="resources.html">Resources</a>
       <a href="about.html">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -31,9 +32,9 @@
 <main id="main">
 <section class="band page-head">
   <div class="wrap">
-    <span class="label">Our work</span>
-    <h1>Projects we can talk about</h1>
-    <p class="lead">A couple of jobs we can share publicly. Happy to go into more detail on either one if you get in touch.</p>
+    <span class="label">Success stories</span>
+    <h1>Real problems, real fixes</h1>
+    <p class="lead">Every project starts with a problem someone was living with. Here&rsquo;s what it was, what we did about it, and how it turned out.</p>
   </div>
 </section>
 
@@ -41,51 +42,86 @@
   <div class="wrap">
     <dl class="facts">
       <div><dt>Client</dt><dd>City of Wadsworth</dd></div>
+      <div><dt>Industry</dt><dd>Local government</dd></div>
       <div><dt>Location</dt><dd>Wadsworth, Ohio</dd></div>
-      <div><dt>Type</dt><dd>Network migration, multiple sites</dd></div>
-      <div><dt>Stack</dt><dd>Arista EOS, NetBox, Ansible</dd></div>
+      <div><dt>Status</dt><dd>Ongoing network support</dd></div>
+      <div><dt>Stack</dt><dd>Arista EOS, NetBox, Prometheus</dd></div>
     </dl>
     <div class="case-body">
-      <h2>Moving the City of Wadsworth from Brocade to Arista</h2>
-      <p>The city&rsquo;s Brocade ICX access switches had reached the point where they were hard to manage, hard to get support for, and hard to keep secure. The job was to replace the whole access layer across multiple municipal sites with Arista campus switching while city services kept running.</p>
-      <p>We moved VLANs and spanning tree over in planned change windows, used Ansible to keep switch configs consistent, and recorded every device, port, and address in NetBox as we went. When the work was done, the city&rsquo;s IT staff had current documentation for the whole access layer.</p>
+      <h2>Replacing a city&rsquo;s switches without interrupting city services</h2>
+      <div class="pfr">
+        <section>
+          <h3><span>1</span>The problem</h3>
+          <p>The city&rsquo;s access switches, an aging Ruckus ICX line, were getting hard to manage, support, and secure. They connect city offices, and a bad cutover would be felt by residents, not just staff.</p>
+        </section>
+        <section>
+          <h3><span>2</span>What we did</h3>
+          <ul>
+            <li>Planned the move to Arista campus switching site by site, with changes done in scheduled windows.</li>
+            <li>Set up NetBox so every switch, port, and address is documented in one place.</li>
+            <li>Added Prometheus monitoring so problems show up on a dashboard before someone calls about them.</li>
+            <li>Provide ongoing software and network support for the city.</li>
+          </ul>
+        </section>
+        <section>
+          <h3><span>3</span>The result</h3>
+          <p>The migration is moving forward without disrupting city services, and the city&rsquo;s staff have current documentation and monitoring for the network as it changes.</p>
+        </section>
+      </div>
       <dl class="results">
         <div><dt>switches configured</dt><dd>30+</dd></div>
-        <div><dt>network uptime</dt><dd>99.999%</dd></div>
         <div><dt>unplanned outages</dt><dd>0</dd></div>
+        <div><dt>working with the city</dt><dd>2023</dd></div>
       </dl>
     </div>
-    </div>
+  </div>
 </article>
 
 <article class="case" id="bradleys">
   <div class="wrap">
     <dl class="facts">
       <div><dt>Client</dt><dd>Bradley&rsquo;s Saving Grace</dd></div>
-      <div><dt>Type</dt><dd>Nonprofit website, pro bono</dd></div>
+      <div><dt>Industry</dt><dd>Nonprofit</dd></div>
+      <div><dt>Type</dt><dd>Website, pro bono</dd></div>
       <div><dt>Live site</dt><dd><a href="https://bradleyshugs.org" target="_blank" rel="noopener">bradleyshugs.org</a></dd></div>
       <div><dt>Stack</dt><dd>Azure Static Web Apps, Functions v4, Table &amp; Blob Storage, GitHub Actions</dd></div>
     </dl>
     <div class="case-body">
-      <h2>A website for Bradley&rsquo;s Saving Grace that costs nothing to run</h2>
-      <p>Bradley&rsquo;s Saving Grace needed a proper website to support its mission and bring in donors, but paying for hosting would have come straight out of its operating budget.</p>
-      <p>We designed and built the site on Azure Static Web Apps, with an Azure Functions backend, Table Storage for data, and Blob Storage for photos and media. A GitHub Actions pipeline publishes every change automatically, so updates go live without anyone logging into a server.</p>
+      <h2>A nonprofit website that costs nothing to run</h2>
+      <div class="pfr">
+        <section>
+          <h3><span>1</span>The problem</h3>
+          <p>Bradley&rsquo;s Saving Grace needed a proper website to share its mission and bring in donors. Every dollar spent on hosting would have come straight out of its operating budget.</p>
+        </section>
+        <section>
+          <h3><span>2</span>What we did</h3>
+          <ul>
+            <li>Designed and built a custom site on Azure Static Web Apps&rsquo; free tier.</li>
+            <li>Added an Azure Functions backend, with Table Storage for data and Blob Storage for photos.</li>
+            <li>Set up automatic publishing, so every update goes live without anyone logging into a server.</li>
+          </ul>
+        </section>
+        <section>
+          <h3><span>3</span>The result</h3>
+          <p>A fast, modern website that supports the organization&rsquo;s mission, with no hosting bill and no servers to look after. We did the work pro bono.</p>
+        </section>
+      </div>
       <dl class="results">
         <div><dt>monthly hosting cost</dt><dd>$0</dd></div>
         <div><dt>servers to maintain</dt><dd>0</dd></div>
       </dl>
     </div>
-    </div>
+  </div>
 </article>
 
 <section class="band cta">
   <div class="wrap">
     <div>
-      <h2>Have a project like these?</h2>
-      <p>More write-ups are on the way. In the meantime, we&rsquo;re happy to talk through what you&rsquo;re dealing with.</p>
+      <h2>Living with a problem like these?</h2>
+      <p>Tell us what&rsquo;s going on. We&rsquo;ll set up a free checkup call and give you an honest take on what to do about it.</p>
     </div>
     <div class="actions">
-      <a href="index.html#contact" class="btn btn-primary">Get in touch <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a href="index.html#contact" class="btn btn-primary">Book a free IT checkup call <span class="arrow" aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -113,6 +149,7 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="case-studies.html">Our work</a></li>
+          <li><a href="resources.html">Scam alerts &amp; tips</a></li>
           <li><a href="index.html#contact">Contact</a></li>
           <li><a href="privacy.html">Privacy policy</a></li>
         </ul>
