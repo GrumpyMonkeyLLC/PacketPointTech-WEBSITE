@@ -280,7 +280,6 @@ a.work:hover { transform: translateY(-3px); box-shadow: var(--shadow); color: in
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .field .invalid { border-color: var(--error); }
 .form-honeypot { display: none !important; }
-.form-captcha { margin: 0.25rem 0 1.1rem; }
 .btn-submit { width: 100%; justify-content: center; }
 .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 .form .form-status { font-size: 0.93rem; color: var(--muted); margin-top: 0.85rem; min-height: 1.4em; }

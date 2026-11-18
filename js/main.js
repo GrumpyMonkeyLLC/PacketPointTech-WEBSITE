@@ -30,7 +30,7 @@ if (menuBtn && navLinks) {
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
 }
 
-// Contact form (Web3Forms + hCaptcha)
+// Contact form (Web3Forms)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   const CONTACT_EMAIL = 'support@packetpointtechnologies.com';
@@ -58,10 +58,6 @@ if (contactForm) {
     }
 
     const data = Object.fromEntries(new FormData(contactForm));
-    if (!data['h-captcha-response']) {
-      setStatus('Please complete the captcha.', 'error');
-      return;
-    }
 
     const name = value('name');
     const company = value('company');
@@ -84,7 +80,6 @@ if (contactForm) {
       console.error('Contact form error:', err);
       setStatus(`Sorry, something went wrong. Please email us directly at ${CONTACT_EMAIL}.`, 'error');
     } finally {
-      if (window.hcaptcha) { try { window.hcaptcha.reset(); } catch (_) {} }
       submitBtn.disabled = false;
     }
   });
